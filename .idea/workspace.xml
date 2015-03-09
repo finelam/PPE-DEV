@@ -2,96 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805cccf2-c452-4f6d-899b-defddf70dbeb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/blog-single.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/blog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/cart.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/checkout.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/contact-us.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/css/prettyPhoto.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/css/price-range.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/css/responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/404/404.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/blog/blog-one.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/blog/blog-three.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/blog/blog-two.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/blog/man-four.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/blog/man-one.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/blog/man-three.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/blog/man-two.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/blog/socials.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/cart/one.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/cart/three.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/cart/two.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/bg_border.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/gallery1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/gallery2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/gallery3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/gallery4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/girl1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/girl2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/girl3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/iframe1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/iframe2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/iframe3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/iframe4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/map.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/new.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/partner1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/partner2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/partner3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/partner4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/pricing.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/product1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/product2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/product3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/product4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/product5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/product6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/recommend1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/recommend2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/recommend3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/sale.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/searchicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/home/shipping.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/product-details/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/product-details/new.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/product-details/rating.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/product-details/share.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/product-details/similar1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/product-details/similar2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/product-details/similar3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/shop/advertisement.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/shop/product10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/shop/product11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/shop/product12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/shop/product7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/shop/product8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/images/shop/product9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/js/contact.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/js/gmaps.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/js/html5shiv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/js/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/js/jquery.prettyPhoto.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/js/jquery.scrollUp.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/js/price-range.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/product-details.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/sendemail.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Eshopper/shop.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/server.js" afterPath="$PROJECT_DIR$/Controller/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PPE-DEV.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,8 +30,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controller/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19873817" vertical-offset="0" max-vertical-offset="634">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.14195584" vertical-offset="0" max-vertical-offset="634">
+              <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -135,6 +47,7 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Controller/server.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -237,7 +150,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1282" height="774" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2453125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -296,10 +209,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41379312" vertical-offset="0" max-vertical-offset="810">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19873817" vertical-offset="0" max-vertical-offset="634">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.14195584" vertical-offset="0" max-vertical-offset="634">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
           <folding />
         </state>
       </provider>

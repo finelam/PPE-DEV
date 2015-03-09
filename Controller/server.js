@@ -3,9 +3,11 @@ var app = express();
 var bodyParser = require('body-parser');
 var session = require('cookie-session');
 
+app.engine('html', require('jade').renderFile);
+
 app.get('/', function(req, res){
-//    res.render('../Views/Eshopper/index.html');
-    res.send('Accueil du site');
+    res.render('../Views/Eshopper/index.html');
+//    res.send('Accueil du site');
 })
 .use(function(req, res, next){
     res.redirect('/');
