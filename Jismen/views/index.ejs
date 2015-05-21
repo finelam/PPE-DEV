@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" ng-app="jismen">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,7 @@
     <title><%=title%></title>
 
     <link href="stylesheets/bootstrap-3.3.4/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="stylesheets/bootstrap-3.3.4/bootstrap-theme.min.css" rel="stylesheet">-->
     <link href="stylesheets/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -16,13 +17,61 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <h1><%=title%></h1>
+  <body ng-controller="adminCtrl">
+    <nav class=" navbar navbar-fixed-top navbar-inverse">
+      <div class="container-fluid" style"height: 100%;">
+        <div class="navbar-header col-md-2 col-sm-3">
+          <a class="navbar-brand" href="">{{title}} - <%=title%></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/admin">Admin</a></li>
+            <li><a href="">test</a></li>
+            <li><a href="">test</a></li>
+            <li><a href="">test</a></li>
+            <li><a href="">test</a></li>
+            <li><a href="/users/login">Connexion</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid" style="position: relative; top: 51px;">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar" style="background-color: #D9FFA8; text-align: center;">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="">test</a></li>
+            <li><a href="">test</a></li>
+            <li><a href="">test</a></li>
+            <li></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">test</a></li>
+            <li><a href="">test</a></li>
+            <li><a href="">test</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">test</a></li>
+            <li><a href="">test</a></li>
+            <li><a href="">test</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-md-10 main panel">
+          <div class="panel-header">
+            <span>Content</span>
+          </div>
+          <div class="panel-body">
+            <span>Texte de test !</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- jQuery) -->
     <script src="javascripts/jquery_2.1.4.min.js"></script>
     <!-- Bootstrap -->
     <script src="javascripts/bootstrap_3.3.4/bootstrap.min.js"></script>
     <!-- Angular -->
     <script src="javascripts/angular_1.3.15/angular.min.js"></script>
+    <script src="javascripts/angular_app.js"></script>
   </body>
 </html>
