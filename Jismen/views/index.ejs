@@ -19,22 +19,22 @@
                 <div class="left-sidebar">
     	<h2 class="title text-center">Catégorie</h2>
 <div class="panel-group category-products" id="accordian">
-						<=% for categories %>
+						<ngrepeat in categories %>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a href="{{item.redirection}}">{{ item.nom }}</a>
                             </div>
                         </div>
-						<=% endfor %>						
+												
                     </div>
                     <div class="brands_products"><!--brands_products-->
                         <h2>Marques</h2>
                         <div class="brands-name">
                             <ul class="nav nav-pills nav-stacked">
-							<=% for item in marques %>
+							<ngrepeat in marques >
                                 <li><a href="#"> <span class="pull-right"></span>{{item}}</a></li>      
-							<=% endfor %>								
+															
                             </ul>							
                         </div>
                     </div><!--/brands_products-->
@@ -53,7 +53,7 @@
             <div class="col-sm-9 padding-right">
                 <div class="features_items"><!--features_items-->
                     <h2 class="title text-center">Nos Produits Phares</h2>
-                    <=% for item in produitsphares %>
+                    <ngrepeat for item in produitsphares>
 					<div class="col-sm-4">					
                         <div class="product-image-wrapper">
                             <div class="single-products">                                
@@ -78,8 +78,7 @@
                                 </ul>
                             </div>							
                         </div>						
-                    </div>
-					<=% endfor %>              
+                    </div>					             
                 </div>
             </div>
         </div>
