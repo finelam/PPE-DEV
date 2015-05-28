@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><%=title%></title>
+    <title>Jismen</title>
 
     <link href="stylesheets/bootstrap-3.3.4/bootstrap.min.css" rel="stylesheet">
-    <!--<link href="stylesheets/bootstrap-3.3.4/bootstrap-theme.min.css" rel="stylesheet">-->
+    <link href="stylesheets/bootstrap-3.3.4/bootstrap-theme.min.css" rel="stylesheet">
     <link href="stylesheets/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -17,51 +17,42 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-controller="adminCtrl">
-    <nav class=" navbar navbar-fixed-top navbar-inverse">
-      <div class="container-fluid" style"height: 100%;">
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
         <div class="navbar-header col-md-2 col-sm-3">
-          <a class="navbar-brand" href="">{{title}} - <%=title%></a>
+          <a class="navbar-brand" href="/#/"><%=title%></a>
         </div>
         <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/admin">Admin</a></li>
-            <li><a href="">test</a></li>
-            <li><a href="">test</a></li>
-            <li><a href="">test</a></li>
-            <li><a href="">test</a></li>
-            <li><a href="/users/login">Connexion</a></li>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/admin">Admin</a></li>
+            <li><a href=""><span class="glyphicon glyphicon-shopping-cart"></span> Panier</a></li>
+            <li><a href="#/user">Profil</a></li>
+            <li><a href="#/users/login">Connexion</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container-fluid" style="position: relative; top: 51px;">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar" style="background-color: #D9FFA8; text-align: center;">
+        <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="">test</a></li>
-            <li><a href="">test</a></li>
-            <li><a href="">test</a></li>
-            <li></li>
+            <li><a href="#/tshirt">T-shirts</a></li>
+            <li><a href="">Pulls</a></li>
+            <li><a href="">Vestes</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="">test</a></li>
-            <li><a href="">test</a></li>
-            <li><a href="">test</a></li>
+            <li><a href="">Jeans</a></li>
+            <li><a href="">Jupes</a></li>
+            <li><a href="">Shorts</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="">test</a></li>
-            <li><a href="">test</a></li>
-            <li><a href="">test</a></li>
+            <li><a href="">Chaussures</a></li>
+            <li><a href="">Sacs</a></li>
+            <li><a href="">Ceintures</a></li>
           </ul>
         </div>
-        <div class="col-sm-9 col-md-10 main panel">
-          <div class="panel-header">
-            <span>Content</span>
-          </div>
-          <div class="panel-body">
-            <span>Texte de test !</span>
-          </div>
+        <div ng-view class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main container">
         </div>
       </div>
     </div>
@@ -71,7 +62,9 @@
     <!-- Bootstrap -->
     <script src="javascripts/bootstrap_3.3.4/bootstrap.min.js"></script>
     <!-- Angular -->
-    <script src="javascripts/angular_1.3.15/angular.min.js"></script>
-    <script src="javascripts/angular_app.js"></script>
+    <script type="text/javascript" src="angular/vendors/angular.js"></script>
+    <script type="text/javascript" src="angular/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="angular/angular_app.js"></script>
+    <script type="text/javascript" src="angular/modules/homepage/homepage_app.js"></script>
   </body>
 </html>

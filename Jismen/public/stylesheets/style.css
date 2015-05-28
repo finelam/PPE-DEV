@@ -8,7 +8,6 @@ a {
 }
 
 .sidebar {
-	/*display: none;*/
 	position: fixed;
 	top: 51px;
 	bottom: 0;
@@ -24,6 +23,11 @@ a {
 	margin-left: -20px;
 	margin-right: -21px;
 	margin-bottom: 20px;
+}
+
+.main{
+	position: fixed;
+	top: 51px;
 }
 
 #login {
