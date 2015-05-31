@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jismen</title>
-
     <link href="stylesheets/bootstrap-3.3.4/bootstrap.min.css" rel="stylesheet">
     <link href="stylesheets/bootstrap-3.3.4/bootstrap-theme.min.css" rel="stylesheet">
     <link href="stylesheets/style.css" rel="stylesheet">
-
+    <!-- <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet"> -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,42 +20,91 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container-fluid">
+    <nav class="navbar navbar-fixed-top">
+      <div class="navbar-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="pull-left">
+                <ul class="userMenu">
+                  <li>
+                    <a href="callto:+33199999999">
+                      <span><i class="glyphicon glyphicon-phone-alt "></i></span>
+                      <span class="hidden-xs">+33(0) 1 99 99 99 99</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="pull-right">
+                <ul class="userMenu">
+                  <li>
+                    <a href="">
+                      <span class="hidden-xs"> Mon compte </span>
+                      <i class="glyphicon glyphicon-user hide visible-xs "></i>
+                    </a></li>
+                  <li>
+                  <a href="#" data-target="modal-connexion" data-toggle="modal">
+                    <span class="hidden-xs"> Connexion </span>
+                    <i class="glyphicon glyphicon-log-in hidden visible-xs"></i>
+                  </a></li>
+                  <li class="hidden-xs">
+                    <a href="#" data-target="#modal-inscription" data-toggle="modal">Inscription</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
         <div class="navbar-header col-md-2 col-sm-3">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
           <a class="navbar-brand" href="/#/"><%=title%></a>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#/admin">Admin</a></li>
-            <li><a href=""><span class="glyphicon glyphicon-shopping-cart"></span> Panier</a></li>
-            <li><a href="#/user">Profil</a></li>
-            <li><a href="#/users/login">Connexion</a></li>
+        <div class="collapse navbar-collapse" id="navbar-collapsible">
+          <ul class="nav navbar-nav">
+            <li><a href="#/">Nouveautés</a></li>
+            <li><a href="#/user">Promos</a></li>
+            <li>
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expended="false">
+                Catégories
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li></li>
+              </ul>
+            </li>
           </ul>
+          <div class="nav navbar-nav navbar-right hidden-xs">
+            <div class="dropdown cartMenu">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="glyphicon glyphicon-shopping-cart"></i>
+                <span>Panier</span>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu"></ul>
+            </div>
+            <div class="search-box">
+              <div class="input-group">
+                <button class="btn btn-nobg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li><a href="#/tshirt">T-shirts</a></li>
-            <li><a href="">Pulls</a></li>
-            <li><a href="">Vestes</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Jeans</a></li>
-            <li><a href="">Jupes</a></li>
-            <li><a href="">Shorts</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Chaussures</a></li>
-            <li><a href="">Sacs</a></li>
-            <li><a href="">Ceintures</a></li>
-          </ul>
-        </div>
-        <div ng-view class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main container">
-        </div>
+      <div id="main" class="row">
+        <ng-view></ng-view>
       </div>
     </div>
 
@@ -64,6 +115,7 @@
     <!-- Angular -->
     <script type="text/javascript" src="angular/vendors/angular.js"></script>
     <script type="text/javascript" src="angular/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="angular/vendors/ui-bootstrap-tpls-0.13.0.min.js"></script>
     <script type="text/javascript" src="angular/angular_app.js"></script>
     <script type="text/javascript" src="angular/modules/homepage/homepage_app.js"></script>
   </body>
