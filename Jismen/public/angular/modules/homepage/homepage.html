@@ -1,0 +1,17 @@
+<div ng-app="homepage_app">
+	<section id="section1">
+		<carousel interval="3000">
+	     	<slide ng-repeat="slide in slides" active="slide.active">
+	        	<img ng-src="{{slide.image}}" style="margin:auto;">
+	        	<div class="carousel-caption">
+	          		<h3>{{slide.text}}</h3>
+	        	</div>
+	     	</slide>
+	    </carousel>
+    </section>
+    <section id="section2" class="globalPadding">
+    	<h3 class="fancy text-center">
+    		<span>Nouveautés</span>
+    	</h3>
+    </section>
+</div>
