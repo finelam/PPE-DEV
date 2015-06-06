@@ -1,6 +1,7 @@
 html body {
   height: 100%;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px;
+  font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 21px;
 }
 
@@ -152,7 +153,8 @@ ul .userMenu{
 .item img{
   max-height: 85vh;
 }
-#main{
+#main,
+#signup{
   margin-top: 80px;
 }
 
@@ -212,7 +214,7 @@ ul .userMenu{
 
 .container .navbar-collapse .navbar-nav .dropdown-menu .description{
   font-weight: normal;
-  font-family: "Proxima-Nova","Times New Roman",Arial;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #555;
 }
 
@@ -242,4 +244,48 @@ ul .userMenu{
 
 .navbar-right .search-box{
   float: right;
+}
+
+/*Signup*/
+#signup.container-fluid{
+  font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#signup.container-fluid .center-formulaire{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-fluid .center-formulaire .user-content .form-inputs{
+  margin-bottom: 15px;
+}
+
+.center-formulaire .user-content .form-inputs input{
+  padding: 12px 20px;
+  background-color: #FFF;
+  color: #404040;
+  font-size: 14px;
+  border: 1px solid #D1DEEB;
+  line-height: 22px;
+  height: 45px;
+  box-sizing: border-box;
+}
+
+.center-formulaire .user-content .form-inputs .enregistrer{
+  background-color: #4169E1;
+  font-size: 26px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #4169E1;
+  border-radius: 3px;
+}
+
+#signup.container-fluid .title{
+  font-size: 30px;
+  font-weight: 300;
+  color: #555;
+}
+
+#signup.container-fluid .margin-bottom-30px{
+  margin-bottom: 30px
 }
