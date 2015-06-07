@@ -1,0 +1,63 @@
+jismen.user: [{
+  "_id" :"objectId",
+  "login": "string",
+  "password": "string",
+  "role": "string",
+  "tel": "string",
+  "email": "string",
+  "name" : "string",
+  "firstname": "string",
+  "address": "string",
+  "zipcode": "string",
+  "city": "string",
+  "shipment": {
+    "shipment_address": "string",
+    "shipment_zipcode": "string",
+    "shipment_city": "string"
+  },
+  "billing": {
+    "billing_address": "string",
+    "billing_zipcode": "string",
+    "billing_city": "string"
+  },
+  "favorites": ["objectId"],
+  "orders": [{
+    "date": "date",
+    "products": ["objectId"],
+    "invoice": {
+      "invoice_id": "int",
+      "paid": "boolean"
+    }
+  }]
+}]
+
+jismen.product: [{
+  "_id": "objectId",
+  "name": "string",
+  "categorie_id": "objectId",
+  "tag": "string",
+  "price": "double",
+  "picture": "file.jpg",
+  "color": "string",
+  "size": [{
+    "size_name": "string",
+    "quantity": "int"
+  }]
+}]
+
+jismen.categories: [{
+  "_id": "objectId",
+  "name": "string",
+  "subcat": [{
+    "subcat_name": "string",
+    "products": ["objectId"]
+  }]
+}]
+
+jismen.comments: [{
+  "_id": "objectId",
+  "author_id": "objectId",
+  "product_id": "objectId",
+  "date": "date",
+  "content": "string"
+}]
