@@ -273,6 +273,7 @@ ul .userMenu{
 }
 
 .center-formulaire .user-content .form-inputs input{
+  width:250px;
   padding: 12px 20px;
   background-color: #FFF;
   color: #404040;
