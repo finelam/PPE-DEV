@@ -129,13 +129,13 @@
     </nav>
     <div id="signup" class="container-fluid">
         <div class="row">
-            <div class="col-xs-8 col-xs-offset-2">
+            <div class="col-xs-12">
                 <h1 class="margin-bottom-30px title center">Créez votre compte Jismen</h1>
                 <div class="center-formulaire">
                     <div class="user-content">
-                        <form>
+                        <form name="myForm" ng-submit="foo()" novalidate>
                             <div class="form-inputs">
-                                <input type="text" name="Nom" id="nom" placeholder="Nom" />
+                                <input type="text" name="Nom" id="nom" placeholder="Nom" required/>
                             </div>
                             <div class="form-inputs">
                                 <input type="text" name="Prenom" id="prenom" placeholder="Prénom" />

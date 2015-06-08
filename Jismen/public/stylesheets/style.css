@@ -246,6 +246,19 @@ ul .userMenu{
   float: right;
 }
 
+/*Home page*/
+.col-sm-3 .product-image-wrapper .single-products .productinfo .add-to-cart
+{
+  background-color: #4169E1;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 300;
+  text-decoration: none;
+  border: 1px solid #4169E1;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
 /*Signup*/
 #signup.container-fluid{
   font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -266,7 +279,9 @@ ul .userMenu{
   font-size: 14px;
   border: 1px solid #D1DEEB;
   line-height: 22px;
-  height: 45px;
+  height: 45px;  
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
