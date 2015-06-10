@@ -20,10 +20,10 @@ jismen.user: [{
     "billing_zipcode": "string",
     "billing_city": "string"
   },
-  "favorites": ["objectId"],
+  "favorites": ["jismen.product.objectId"],
   "orders": [{
     "date": "date",
-    "products": ["objectId"],
+    "products": ["jismen.product.objectId"],
     "invoice": {
       "invoice_id": "int",
       "paid": "boolean"
@@ -34,9 +34,10 @@ jismen.user: [{
 jismen.product: [{
   "_id": "objectId",
   "name": "string",
-  "categorie_id": "objectId",
+  "subcat_id": "jismen.categorie.subcat_objectId",
   "tag": "string",
   "price": "double",
+  "description": "string",
   "picture": "file.jpg",
   "color": "string",
   "size": [{
@@ -50,14 +51,14 @@ jismen.categories: [{
   "name": "string",
   "subcat": [{
     "subcat_name": "string",
-    "products": ["objectId"]
+    "products": ["jismen.subcat.objectId"]
   }]
 }]
 
 jismen.comments: [{
   "_id": "objectId",
-  "author_id": "objectId",
-  "product_id": "objectId",
+  "author_id": "jismen.user.objectId",
+  "product_id": "jsimen.product.objectId",
   "date": "date",
   "content": "string"
 }]
