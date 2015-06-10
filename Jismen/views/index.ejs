@@ -21,86 +21,111 @@
   </head>
   <body>
     <nav class="navbar navbar-fixed-top">
-      <div class="navbar-top">
+        <div class="navbar-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="pull-left">
+                            <ul class="userMenu">
+                                <li>
+                                    <a href="callto:+33199999999">
+                                        <span><i class="glyphicon glyphicon-phone-alt "></i></span>
+                                        <span class="hidden-xs">+33(0) 1 99 99 99 99</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="pull-right">
+                            <ul class="userMenu">
+                                <li>
+                                    <a href="">
+                                        <span class="hidden-xs"> Mon compte </span>
+                                        <i class="glyphicon glyphicon-user hide visible-xs "></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-target="modal-connexion" data-toggle="modal">
+                                        <span class="hidden-xs"> Connexion </span>
+                                        <i class="glyphicon glyphicon-log-in hidden visible-xs"></i>
+                                    </a>
+                                </li>
+                                <li class="hidden-xs">
+                                    <a href="#/signup" data-target="#modal-inscription" data-toggle="modal">Inscription</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
-          <div class="row">
-            <div class="col-xs-6">
-              <div class="pull-left">
-                <ul class="userMenu">
-                  <li>
-                    <a href="callto:+33199999999">
-                      <span><i class="glyphicon glyphicon-phone-alt "></i></span>
-                      <span class="hidden-xs">+33(0) 1 99 99 99 99</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xs-6">
-              <div class="pull-right">
-                <ul class="userMenu">
-                  <li>
-                    <a href="">
-                      <span class="hidden-xs"> Mon compte </span>
-                      <i class="glyphicon glyphicon-user hide visible-xs "></i>
-                    </a></li>
-                  <li>
-                  <a href="#" data-target="modal-connexion" data-toggle="modal">
-                    <span class="hidden-xs"> Connexion </span>
-                    <i class="glyphicon glyphicon-log-in hidden visible-xs"></i>
-                  </a></li>
-                  <li class="hidden-xs">
-                    <a href="#" data-target="#modal-inscription" data-toggle="modal">Inscription</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="navbar-header col-md-2 col-sm-3">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/#/"><%=title%></a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-collapsible">
-          <ul class="nav navbar-nav">
-            <li><a href="#/">Nouveautés</a></li>
-            <li><a href="#/user">Promos</a></li>
-            <li>
-              <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expended="false">
-                Catégories
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li></li>
-              </ul>
-            </li>
-          </ul>
-          <div class="nav navbar-nav navbar-right hidden-xs">
-            <div class="dropdown cartMenu">
-              <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="glyphicon glyphicon-shopping-cart"></i>
-                <span>Panier</span>
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu"></ul>
-            </div>
-            <div class="search-box">
-              <div class="input-group">
-                <button class="btn btn-nobg" type="button">
-                  <i class="glyphicon glyphicon-search"></i>
+            <div class="navbar-header col-md-2 col-sm-3">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-              </div>
+                <a class="navbar-brand" href="/#/"><%=title%></a>
             </div>
-          </div>
+            <div class="collapse navbar-collapse" id="navbar-collapsible">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/">Nouveautés</a></li>
+                    <li><a href="#/user">Promos</a></li>
+                    <li>
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expended="false">
+                            Catégories
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="bold left-part">
+                                Top
+                                <ul>
+                                    <li class="no-puce line-separation"><a class="description">Chemise</a></li>
+                                    <li class="no-puce line-separation"><a class="description" href="">T-shirt</a></li>
+                                    <li class="no-puce line-separation"><a class="description" href="">Polo</a></li>
+                                </ul>
+                            </li>
+                            <li class="bold left-part">
+                                Bas
+                                <ul>
+                                    <li class="no-puce line-separation"><a class="description" href="">Jeans</a></li>
+                                    <li class="no-puce line-separation"><a class="description" href="">Jupe</a></li>
+                                    <li class="no-puce line-separation"><a class="description" href="">Short</a></li>
+                                </ul>
+                            </li>
+                            <li class="bold left-part">
+                                Accessoires
+                                <ul>
+                                    <li class="no-puce line-separation"><a class="description" href="">Chaussures</a></li>
+                                    <li class="no-puce line-separation"><a class="description" href="">Ceinture</a></li>
+                                    <li class="no-puce line-separation"><a class="description" href="">Sacs</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav navbar-nav navbar-right hidden-xs">
+                    <div class="dropdown cartMenu">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                            <span>Panier</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu"></ul>
+                    </div>
+                    <div class="search-box">
+                        <div class="input-group">
+                            <button class="btn btn-nobg" type="button">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </nav>
     <div class="container-fluid">
       <div id="main" class="row">
@@ -118,5 +143,6 @@
     <script type="text/javascript" src="angular/vendors/ui-bootstrap-tpls-0.13.0.min.js"></script>
     <script type="text/javascript" src="angular/angular_app.js"></script>
     <script type="text/javascript" src="angular/modules/homepage/homepage_app.js"></script>
+    <script type="text/javascript" src="angular/modules/user/user_app.js"></script>
   </body>
 </html>
