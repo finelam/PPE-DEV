@@ -7,6 +7,11 @@ user.config(['$routeProvider', function($routeProvider){
       controller: 'SignupCtrl'
     })
 
+    .when('/login', {
+      templateUrl: 'angular/modules/user/login.html',
+      controller: 'LoginCtrl'
+    })
+
     .when('/user/:id', {
       templateUrl: 'angular/modules/user/user.html',
       controller: 'UserCtrl'
@@ -15,6 +20,9 @@ user.config(['$routeProvider', function($routeProvider){
     ;
 }]);
 
+user.controller('LoginCtrl', ['$scope', function($scope, $routeParams){
+  $scope.page = 'Login';
+}]);
 user.controller('SignupCtrl', ['$scope', function($scope){
   $scope.page = 'Insription';
 }]);
