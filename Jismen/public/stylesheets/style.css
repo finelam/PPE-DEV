@@ -263,13 +263,38 @@ ul .userMenu{
 #signup.container-fluid{
   font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-#signup.container-fluid .center-formulaire{
+#signup.container-fluid .center-formulaire,
+#connexion.container-fluid .center-formulaire{
   margin: 0 auto;
   text-align: center;
 }
 
+.container-fluid .center-formulaire .user-content .line-serparator-blue{
+  border: solid 1px #00CCFF;
+  width: 250px;
+  margin: 10px auto;  
+}
+
+.container-fluid .center-formulaire .user-content .pas-encore-membre .free-registration{
+  border-top: solid 2px #00CCFF;
+  margin: 0 auto;
+  padding:10px;
+}
+
+.container-fluid .center-formulaire .user-content .mdp-oublie .free-registration{
+  padding: 10px 65px;
+  border-bottom: solid 2px #00CCFF;
+  margin: 10px auto;
+}
+
+
 .container-fluid .center-formulaire .user-content .form-inputs{
   margin-bottom: 15px;
+}
+
+.container-fluid .center-formulaire .user-content .form-inputs.center-block{
+  display: table;
+  margin: 0 auto;
 }
 
 .center-formulaire .user-content .form-inputs input{
@@ -286,7 +311,19 @@ ul .userMenu{
   box-sizing: border-box;
 }
 
-.center-formulaire .user-content .form-inputs .enregistrer{
+.center-formulaire .user-content .form-inputs label{
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+.center-formulaire .user-content .form-inputs input.checkbox{
+  width: auto;
+  display: inline-block;
+}
+
+.center-formulaire .user-content .form-inputs .enregistrer,
+.center-formulaire .user-content .form-inputs .validation{
   background-color: #4169E1;
   font-size: 26px;
   color: #fff;
@@ -296,12 +333,14 @@ ul .userMenu{
   border-radius: 3px;
 }
 
-#signup.container-fluid .title{
+#signup.container-fluid .title,
+#connexion.container-fluid .title{
   font-size: 30px;
   font-weight: 300;
   color: #555;
 }
 
-#signup.container-fluid .margin-bottom-30px{
+#signup.container-fluid .margin-bottom-30px,
+#connexion.container-fluid .margin-bottom-30px{
   margin-bottom: 30px
 }
