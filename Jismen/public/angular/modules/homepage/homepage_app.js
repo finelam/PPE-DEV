@@ -29,6 +29,50 @@ homepage.controller('homepageCtrl', ['$scope', function($scope){
 			text : 'robe débarddeur'
 		}
 	];
+	$scope.produits = [
+		{
+			image: 'images/product1.jpg',
+			price: '30 €',
+			text : 'Easy Polo Black Edition'
+		},
+		{
+			image: 'images/product2.jpg',
+			price: '40 €',
+			text : 'Easy Polo Black Edition'
+		}, 
+		{
+			image: 'images/product3.jpg',
+			price: '45 €',
+			text : 'Easy Polo Black Edition'
+		},
+		{
+			image: 'images/product4.jpg',
+			price: '30 €',
+			text : 'Easy Polo Black Edition'
+		}
+	];
+	$scope.produitsphares = [
+		{
+			image: 'images/gallery1.jpg',
+			price: '30 €',
+			text : 'Easy Polo Black Edition'
+		},
+		{
+			image: 'images/gallery2.jpg',
+			price: '40 €',
+			text : 'Easy Polo Black Edition'
+		}, 
+		{
+			image: 'images/gallery3.jpg',
+			price: '45 €',
+			text : 'Easy Polo Black Edition'
+		},
+		{
+			image: 'images/gallery4.jpg',
+			price: '30 €',
+			text : 'Easy Polo Black Edition'
+		}
+	];
 }]);
 
 homepage.controller('subCatCtrl', ['$scope', '$routeParams', function($scope, $routeParams){
