@@ -1,8 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var user = new Schema({
-  _id : Schema.Types.ObjectId,
+var UserSchema = new Schema({
   login: String,
   password: String,
   role: String,
@@ -32,6 +31,9 @@ var user = new Schema({
       paid: Boolean
     }
   }]
+},
+{
+  collection: 'user'
 });
 
 module.exports = mongoose.model('user', UserSchema);
