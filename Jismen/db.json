@@ -15,6 +15,7 @@ jismen.user: [{
     "shipment_zipcode": "string",
     "shipment_city": "string"
   },
+  "cart": ["jismen.product.objectId"],
   "billing": {
     "billing_address": "string",
     "billing_zipcode": "string",
