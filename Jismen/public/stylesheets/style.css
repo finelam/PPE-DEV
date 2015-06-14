@@ -47,6 +47,9 @@ a {
   text-align: center;
   margin-top: 30px;
 }
+.flt-r{
+  float: right;
+}
 
 .btn-nobg {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
@@ -69,6 +72,18 @@ ul, ol{
   text-align: center;
 }
 
+.mg-t-15{
+  margin-top: 15px;
+}
+.mg-b-15{
+  margin-bottom: 15px;
+}
+.mg-t-30{
+  margin-top: 30px;
+}
+.mg-b-30{
+  margin-bottom: 30px;
+}
 /**************************
 ********* NAVBAR ***********
 *****************************/
@@ -83,7 +98,7 @@ ul, ol{
 .navbar-top{
   background-color: #4BB777;
   text-transform: uppercase;
-  height: 30px; 
+  height: 30px;
   font-size: 11px;
   font-weight: bold;
   line-height: 30px;
@@ -175,15 +190,16 @@ ul .userMenu{
 .fancy {
   overflow: hidden;
   text-align: center;
+  margin-bottom: 30px;
 }
- 
+
 .fancy span {
   position: relative;
   text-transform: uppercase;
   font-weight: lighter;
   font-size: 24px;
 }
- 
+
 .fancy span:before,
 .fancy span:after {
   content: "";
@@ -195,12 +211,12 @@ ul .userMenu{
   top: 50%;
   margin-top: -4px;
 }
- 
+
 .fancy span:before {
   right: 100%;
   margin-right: 15px;
 }
- 
+
 .fancy span:after {
   left: 100%;
   margin-left: 15px;
@@ -242,6 +258,10 @@ ul .userMenu{
   background-color: #fff;
 }
 
+.bg-grey{
+  background-color: #EDEEF0;
+}
+
 .navbar-right .search-box{
   float: right;
 }
@@ -272,7 +292,7 @@ ul .userMenu{
 .container-fluid .center-formulaire .user-content .line-serparator-blue{
   border: solid 1px #00CCFF;
   width: 250px;
-  margin: 10px auto;  
+  margin: 10px auto;
 }
 
 .container-fluid .center-formulaire .user-content .pas-encore-membre .free-registration{
@@ -305,7 +325,7 @@ ul .userMenu{
   font-size: 14px;
   border: 1px solid #D1DEEB;
   line-height: 22px;
-  height: 45px;  
+  height: 45px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

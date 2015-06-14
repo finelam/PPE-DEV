@@ -1,0 +1,32 @@
+	<div class="mg-t-15" ng-app="admin_app">
+    <div class="col-xs-12 col-sm-6 col-md-offset-3">
+      <!-- Search bar -->
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+        <input type="text" name="name" ng-model="recherche" class="form-control" placeholder="Filtre...">
+      </div>
+      <!-- /Search bar -->
+    </div>
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <!-- <div class="row"> -->
+        <div class="panel panel-default">
+          <div class="panel-heading center">
+            <h1>ARTICLES</h1>
+          </div>
+          <ul ng-repeat="categorie in categories" class="list-group">
+            <li class="list-group-item"><h4><b>{{categorie.name|uppercase}}</b></h4></li>
+            <li class="list-group-item">
+              <ul ng-repeat="subcat in categorie.subcat">
+                <li class="list-group-item"><h5><b>{{subcat.subcat_name|uppercase}}</b></h5></li>
+                <li class="list-group-item">
+                  <ul class="list-group">
+                    <li ng-repeat="product in subcat.products|filter: recherche track by $index" class="list-group-item">{{product}}</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- </div> -->
+  	</div>

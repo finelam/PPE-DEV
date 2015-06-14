@@ -3,15 +3,15 @@ var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
   login: String,
-  password: String,
+  password: {type: String, required: true},
   role: String,
   tel: String,
-  email: String,
-  name : String,
-  firstname: String,
-  address: String,
-  zipcode: String,
-  city: String,
+  email: {type: String, required: true, unique: true},
+  name : {type: String, required: true},
+  firstname: {type: String, required: true},
+  address: {type: String, required: true},
+  zipcode: {type: String, required: true},
+  city: {type: String, required: true},
   shipment: {
     shipment_address: String,
     shipment_zipcode: String,

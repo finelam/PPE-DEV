@@ -1,10 +1,12 @@
-var express = require('express');
-var ObjectId = require('mongoose').Types.ObjectId;
-var router = express.Router();
-var User = require('../models/user');
-var Product = require('../models/product');
+var express   = require('express');
+var jwt       = require('jsonwebtoken');
+var app       = require('../app')
+var ObjectId  = require('mongoose').Types.ObjectId;
+var router    = express.Router();
+var User      = require('../models/user');
+var Product   = require('../models/product');
 var Categorie = require('../models/categorie');
-var Comment = require('../models/comment');
+var Comment   = require('../models/comment');
 
 
 router.get('/', function (req, res, next){
@@ -60,16 +62,20 @@ router.post('/user/', function(req, res){
 });
 
 
-// Retourne l'utilisateur corerspondant au login + mdp
-router.post('/user/login', function(req, res){
-  User.find({$and: [{email: req.body.email}, {password: req.body.password}]},function(err, user){
+// Retourne l'utilisateur correspondant au login + mdp
+router.post('/user/auth', function(req, res){
+  User.findOne({email: req.body.email},function(err, user){
     if (err)
-      res.send(err);
-    else {
-      if(user)
-        res.json(user);
-      else
-        res.send(false);
+      throw err;
+    if (!user)
+      res.json({success: false, message: 'Adresse mail inconnue'});
+    else{
+      var token = jwt.sign(user, app.get('secret'),{expiresInMinutes: 120,});
+      res.json({
+        success: true,
+        message: 'Auth : ok',
+        token: token
+      });
     }
   });
 });

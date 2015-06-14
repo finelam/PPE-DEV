@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" ng-app="jismen">
+<html lang="fr" ng-app="admin_app">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,62 +68,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/#/"><%=title%></a>
+                <a class="navbar-brand" href="/admin#/"><%=title%></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapsible">
-                <ul class="nav navbar-nav">
-                    <li><a href="#/">Nouveautés</a></li>
-                    <li><a href="#/user">Promos</a></li>
-                    <li>
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expended="false">
-                            Catégories
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="bold left-part">
-                                Top
-                                <ul>
-                                    <li class="no-puce line-separation"><a class="description">Chemise</a></li>
-                                    <li class="no-puce line-separation"><a class="description" href="">T-shirt</a></li>
-                                    <li class="no-puce line-separation"><a class="description" href="">Polo</a></li>
-                                </ul>
-                            </li>
-                            <li class="bold left-part">
-                                Bas
-                                <ul>
-                                    <li class="no-puce line-separation"><a class="description" href="">Jeans</a></li>
-                                    <li class="no-puce line-separation"><a class="description" href="">Jupe</a></li>
-                                    <li class="no-puce line-separation"><a class="description" href="">Short</a></li>
-                                </ul>
-                            </li>
-                            <li class="bold left-part">
-                                Accessoires
-                                <ul>
-                                    <li class="no-puce line-separation"><a class="description" href="">Chaussures</a></li>
-                                    <li class="no-puce line-separation"><a class="description" href="">Ceinture</a></li>
-                                    <li class="no-puce line-separation"><a class="description" href="">Sacs</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="nav navbar-nav navbar-right hidden-xs">
-                    <div class="dropdown cartMenu">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="glyphicon glyphicon-shopping-cart"></i>
-                            <span>Panier</span>
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu"></ul>
-                    </div>
-                    <div class="search-box">
-                        <div class="input-group">
-                            <button class="btn btn-nobg" type="button">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+              <ul class="nav navbar-nav">
+                <li><a href="#/users">Uilisateurs</a></li>
+                <li><a href="#/products">Articles</a></li>
+              </ul>
             </div>
         </div>
     </nav>
@@ -142,7 +93,6 @@
     <script type="text/javascript" src="angular/vendors/angular-route.min.js"></script>
     <script type="text/javascript" src="angular/vendors/ui-bootstrap-tpls-0.13.0.min.js"></script>
     <script type="text/javascript" src="angular/angular_app.js"></script>
-    <script type="text/javascript" src="angular/modules/homepage/homepage_app.js"></script>
-    <script type="text/javascript" src="angular/modules/user/user_app.js"></script>
+    <script type="text/javascript" src="angular/modules/admin/admin_app.js"></script>
   </body>
 </html>
