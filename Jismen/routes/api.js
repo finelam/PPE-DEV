@@ -62,6 +62,16 @@ router.post('/user/', function(req, res){
 });
 
 
+////// methode : PUT //////
+router.put('/user/', function(req, res){
+  console.log(req.body.user._id);
+  var query = {_id: req.body.user._id};
+  User.update(query, req.body.user, function(err, response){
+    if (err) res.json({success : false, message: err});
+    else res.json({success: true, message: response});
+  });
+});
+
 // Retourne l'utilisateur correspondant au login + mdp
 router.post('/user/auth', function(req, res){
   User.findOne({email: req.body.email},function(err, user){
@@ -77,6 +87,14 @@ router.post('/user/auth', function(req, res){
         token: token
       });
     }
+  });
+});
+
+////// methode : delete //////
+router.delete('/user/:userId', function(req, res){
+  User.remove({_id: req.params.userId}, function(err, response){
+    if (err) throw err;
+    else res.json({success: true, message: response});
   });
 });
 
@@ -137,6 +155,24 @@ router.post('/product', function(req, res){
       res.send(err);
     else
       res.send(true);
+  });
+});
+
+////// methode : PUT //////
+router.put('/product/', function(req, res){
+  console.log(req.body.product._id);
+  var query = {_id: req.body.product._id};
+  Product.update(query, req.body.product, function(err, response){
+    if (err) res.json({success : false, message: err});
+    else res.json({success: true, message: response});
+  });
+});
+
+////// methode : DELETE //////
+router.delete('/product/:productId', function(req, res){
+  Product.remove({_id: req.params.productId}, function(err, response){
+    if (err) throw err;
+    else res.json({success: true, message: response});
   });
 });
 

@@ -1,73 +1,44 @@
-<div class="mg-t-15" ng-app="user_app">
-  <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-    <!-- Search bar -->
-    <div class="input-group">
+<div class="mg-t-15">
+  <!-- Search bar -->
+  <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="">
+    <div class="input-group" style="">
       <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
       <input type="text" name="recherche" class="form-control" placeholder="Filtre..." ng-model="recherche">
     </div>
-    <!-- /Search bar -->
   </div>
-  <div ng-repeat="user in users|filter:recherche|orderBy:'name'") class="col-xs-12 col-sm-8 col-sm-offset-2">
+  <!-- /Search bar -->
+  <div class="col-xs-12 col-sm-6 col-sm-offset-3 alert alert-info">
+    {{(users|filter:recherche).length}} utilisateurs trouvés
+  </div>
+
+  <div class="col-xs-12 col-sm-8 col-sm-offset-2 mg-t-30">
     <div class="panel panel-default">
-      <div class="panel-heading">
-          <h3 class="panel-title"><b>{{user.name|uppercase}} {{user.firstname}}<span class="flt-r">{{user.role}}</span></b></h3>
+      <div class="panel-heading center">
+        <h1>Utilisateurs</h1>
       </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-xs-12 col-sm-9">
-            <div>
-              <label>ID :</label>
-              {{user._id}}
-            </div>
-            <div>
-              <label>Email :</label>
-              <a href="mailto:{{user.email}}">{{user.email}}</a>
-            </div>
-            <div>
-              <label>Téléphone :</label>
-              <a href="callto:{{user.tel}}">{{user.tel}}</a>
-            </div>
-            <div>
-              <label>Adresse :</label>
-              {{user.address}} {{user.zipcode}} {{user.city}}
-            </div>
-            <div>
-              <label>Livraison :</label>
-              {{user.shipment.shipment_address}} {{user.shipment.shipment_zipcode}} {{user.shipment.shipment_city}}
-            </div>
-            <div>
-              <label>Facturation :</label>
-              {{user.billing.billing_address}} {{user.billing.billing_zipcode}} {{user.billing.billing_city}}
-            </div>
-            <div>
-              <label>Factures :</label>
-              <!-- <div ng-repeat="order in user.orders" class="col-xs-12 col-sm-11 col-sm-offset-1">
-                {{order.invoice.invoice_id}}
-                </div> -->
-            </div>
-            <div>
-              <label>Favoris :</label>
-              <!-- <div ng-repeat="favorite in user.favorites" class="col-xs-12 col-sm-11 col-sm-offset-1">
-                {{favorite}}
-              </div> -->
-            </div>
-            <div>
-              <label>Commentaires :</label>
-              <!-- <div ng-repeat="comment in comments|filter : author_id : user._id" class="col-xs-12 col-sm-11 col-sm-offset-1">
-                <label>{{comment.product_id}} :</label>
-                {{comment.content}}
-              </div> -->
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-3">
-            <button type="button" name="Modifier" class="btn btn-primary mg-b-15  col-xs-12">
-              <i class="glyphicon glyphicon-ok"></i> Modifier
-            </button>
-            <button type="button" name="Supprimer" class="btn btn-danger mg-b-15 col-xs-12">
-              <i class="glyphicon glyphicon-remove"></i> Supprimer
-            </button>
-          </div>
-        </div>
+      <div class="panel-content">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>
+                Nom
+              </th>
+              <th>
+                Role
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="user in users|filter:recherche|orderBy:'name'" class="clickable" ng-click="selectUser(user)">
+              <td>
+                <b>{{user.name}} {{user.firstname}}</b>
+              </td>
+              <td>
+                {{user.role}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

@@ -9,11 +9,11 @@
     </div>
     <div class="col-xs-12 col-md-8 col-md-offset-2">
       <!-- <div class="row"> -->
-        <div class="panel panel-default">
+        <div class="panel panel-default mg-t-30">
           <div class="panel-heading center">
             <h1>ARTICLES</h1>
           </div>
-          <ul ng-repeat="categorie in categories" class="list-group">
+          <!-- <ul ng-repeat="categorie in categories" class="list-group">
             <li class="list-group-item"><h4><b>{{categorie.name|uppercase}}</b></h4></li>
             <li class="list-group-item">
               <ul ng-repeat="subcat in categorie.subcat">
@@ -25,7 +25,26 @@
                 </li>
               </ul>
             </li>
-          </ul>
+          </ul> -->
+					<div class="panel-content">
+						<table ng-repeat="categorie in categories" class="table">
+							<tr><th>{{categorie.name}}</th></tr>
+							<tr ng-repeat="subcat in categorie.subcat"><td>
+								<table class="table table-hover">
+									<thead>
+										<tr><th>{{subcat.subcat_name}}</th></tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="product in subcat.products|filter: recherche track by $index" ng-click="selectProduct(product)" class="clickable">
+											<td>
+												{{product}}
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td></tr>
+						</table>
+					</div>
         </div>
       </div>
       <!-- </div> -->

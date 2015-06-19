@@ -1,0 +1,100 @@
+<div class="mg-t-15">
+  <div class="col-xs-12 col-sm-8 col-sm-offset-2 mg-t-30">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><b>{{user.name|uppercase}} {{user.firstname}}<span class="flt-r">{{user.role}}</span></b></h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <form class="form-horizontal" name="userForm">
+              <div class="col-xs-12 col-sm-9">
+                  <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 control-label">ID :</label>
+                    <div class="col-xs-12 col-sm-10">
+                      <span class="form-control">{{user._id}}</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 control-label">Nom :</label>
+                    <div class="col-xs-12 col-sm-10">
+                      <input ng-model="user.name" Type="text" class="form-control" value="{{user.name}}" placeholder="Nom...">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 control-label">Prénom :</label>
+                    <div class="col-xs-12 col-sm-10">
+                      <input ng-model="user.firstname" type="text" class="form-control" value="{{user.firstname}}" placeholder="Prénom...">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 control-label">Email :</label>
+                    <div class="col-xs-12 col-sm-10 controls">
+                      <div class="input-group">
+                        <input name="email" ng-model="user.email" class="form-control" type="email" value="{{user.email}}" placeholder="Email...">
+                        <a class="input-group-addon" href="mailto:{{user.email}}"><i class="glyphicon glyphicon-envelope"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 control-label">Téléphone :</label>
+                    <div class="col-xs-12 col-sm-10">
+                      <div class="input-group">
+                        <input class="form-control" type="text" value="{{user.tel}}">
+                        <a class="input-group-addon" href="callto: {{user.tel}}"><i class="glyphicon glyphicon-phone-alt"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 control-label">Adresse :</label>
+                    <div class="col-xs-12 col-sm-10">
+                      <input ng-model="user.address" type="text" value="{{user.address}}" class="form-control" placeholder="Adresse...">
+                      <input ng-model="user.zipcode" type="text" value="{{user.zipcode}}" class="form-control" placeholder="Code postal">
+                      <input ng-model="user.city" type="text" value="{{user.city|uppercase}}" class="form-control" placeholder="Ville">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 control-label">Livraison :</label>
+                    <div class="col-xs-12 col-sm-10">
+                      <input ng-model="user.shipment.shipment_address" type="text" value="{{user.shipment.shipment_address}}" class="form-control" placeholder="Adresse...">
+                      <input ng-model="user.shipment.shipment_zipcode" type="text" value="{{user.shipment.shipment_zipcode}}" class="form-control" placeholder="Code postal">
+                      <input ng-model="user.shipment.shipment_city" type="text" value="{{user.shipment.shipment_city|uppercase}}" class="form-control" placeholder="Ville">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 control-label">Facturation :</label>
+                    <div class="col-xs-12 col-sm-10">
+                      <input ng-model="user.billing.billing_address" type="text" value="{{user.billing.billing_address}}" class="form-control" placeholder="Adresse...">
+                      <input ng-model="user.billing.billing_zipcode" type="text" value="{{user.billing.billing_zipcode}}" class="form-control" placeholder="Code postal">
+                      <input ng-model="user.billing.billing_city" type="text" value="{{user.billing.billing_city|uppercase}}" class="form-control" placeholder="Ville">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 control-label">Factures :</label>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 control-label">Favoris :</label>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12 col-sm-2 control-label">Commentaires :</label>
+                  </div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                <button ng-click="reset()" type="button" name="Reset" class="btn btn-success mg-b-15  col-xs-12">
+                  <i class="glyphicon glyphicon-repeat"></i> Réinitialiser
+                </button>
+                <button ng-confirm="Enregistrer les modifications ?" ng-disabled="userForm.$invalid" ng-click="modify(user)" type="submit" name="Modifier" class="btn btn-warning mg-b-15 col-xs-12">
+                  <i class="glyphicon glyphicon-ok"></i> Modifier
+                </button>
+                <button ng-click="delete(user)" ng-confirm="Supprimer cet utilisateur ?" type="button" name="Supprimer" class="btn btn-danger mg-b-15 col-xs-12">
+                  <i class="glyphicon glyphicon-remove"></i> Supprimer
+                </button>
+                <a href="admin#/users" class="btn btn-primary mg-b-15 col-xs-12">
+                  <i class="glyphicon glyphicon-list-alt"></i> Retour à la liste
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

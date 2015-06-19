@@ -84,6 +84,15 @@ ul, ol{
 .mg-b-30{
   margin-bottom: 30px;
 }
+
+.form-group .input-group{
+  margin-left: 0;
+}
+
+.panel-heading{
+  background: #4EC67F !important;
+  color: #FFF !important;
+}
 /**************************
 ********* NAVBAR ***********
 *****************************/
@@ -363,4 +372,16 @@ ul .userMenu{
 #signup.container-fluid .margin-bottom-30px,
 #connexion.container-fluid .margin-bottom-30px{
   margin-bottom: 30px
+}
+
+/**************
+***** Admin *****
+******************/
+.table-hover > tbody > tr:hover {
+  background: #4EC67F;
+  color: #FFF;
+}
+
+.clickable{
+  cursor: pointer;
 }
