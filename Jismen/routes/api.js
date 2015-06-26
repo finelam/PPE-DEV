@@ -62,16 +62,6 @@ router.post('/user/', function(req, res){
 });
 
 
-////// methode : PUT //////
-router.put('/user/', function(req, res){
-  console.log(req.body.user._id);
-  var query = {_id: req.body.user._id};
-  User.update(query, req.body.user, function(err, response){
-    if (err) res.json({success : false, message: err});
-    else res.json({success: true, message: response});
-  });
-});
-
 // Retourne l'utilisateur correspondant au login + mdp
 router.post('/user/auth', function(req, res){
   User.findOne({email: req.body.email},function(err, user){
@@ -87,6 +77,16 @@ router.post('/user/auth', function(req, res){
         token: token
       });
     }
+  });
+});
+
+////// methode : PUT //////
+router.put('/user/', function(req, res){
+  console.log(req.body.user._id);
+  var query = {_id: req.body.user._id};
+  User.update(query, req.body.user, function(err, response){
+    if (err) res.json({success : false, message: err});
+    else res.json({success: true, message: response});
   });
 });
 

@@ -82,10 +82,10 @@
                 <button ng-click="reset()" type="button" name="Reset" class="btn btn-success mg-b-15  col-xs-12">
                   <i class="glyphicon glyphicon-repeat"></i> Réinitialiser
                 </button>
-                <button ng-confirm="Enregistrer les modifications ?" ng-disabled="userForm.$invalid" ng-click="modify(user)" type="submit" name="Modifier" class="btn btn-warning mg-b-15 col-xs-12">
+                <button ng-disabled="userForm.$invalid" ng-click="modify(user)" type="submit" name="Modifier" class="btn btn-warning mg-b-15 col-xs-12">
                   <i class="glyphicon glyphicon-ok"></i> Modifier
                 </button>
-                <button ng-click="delete(user)" ng-confirm="Supprimer cet utilisateur ?" type="button" name="Supprimer" class="btn btn-danger mg-b-15 col-xs-12">
+                <button ng-click="delete(user)" type="button" name="Supprimer" class="btn btn-danger mg-b-15 col-xs-12">
                   <i class="glyphicon glyphicon-remove"></i> Supprimer
                 </button>
                 <a href="admin#/users" class="btn btn-primary mg-b-15 col-xs-12">

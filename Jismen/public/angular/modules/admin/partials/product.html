@@ -12,51 +12,51 @@
               </div>
               <div class="col-xs-12 col-sm-6">
                 <div class="form-group">
-                  <label class="col-xs-12 col-sm-2 control-label">ID :</label>
-                  <div class="col-xs-12 col-sm-10">
+                  <label class="col-xs-12 col-sm-3 control-label">ID :</label>
+                  <div class="col-xs-12 col-sm-9">
                     <span class="form-control">{{product._id  }}</span>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-xs-12 col-sm-2 control-label">Nom :</label>
-                  <div class="col-xs-12 col-sm-10">
+                  <label class="col-xs-12 col-sm-3 control-label">Nom :</label>
+                  <div class="col-xs-12 col-sm-9">
                     <input ng-model="product.name" Type="text" class="form-control" value="{{product.name}}" placeholder="Nom...">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-xs-12 col-sm-2 control-label">Prix :</label>
-                  <div class="col-xs-12 col-sm-10">
+                  <label class="col-xs-12 col-sm-3 control-label">Prix :</label>
+                  <div class="col-xs-12 col-sm-9">
                     <input ng-model="product.price" Type="text" class="form-control" value="{{product.prix}}" placeholder="Prix...">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-xs-12 col-sm-2 control-label">Tag :</label>
-                  <div class="col-xs-12 col-sm-10">
+                  <label class="col-xs-12 col-sm-3 control-label">Tag :</label>
+                  <div class="col-xs-12 col-sm-9">
                     <input ng-model="product.tag" Type="text" class="form-control" value="{{product.tag}}" placeholder="Prix...">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-xs-12 col-sm-2 control-label">Description :</label>
-                  <div class="col-xs-12 col-sm-10">
+                  <label class="col-xs-12 col-sm-3 control-label">Description :</label>
+                  <div class="col-xs-12 col-sm-9">
                     <input ng-model="product.description" Type="textarea" class="form-control" value="{{product.description}}" placeholder="Description...">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-xs-12 col-sm-2 control-label">Couleur :</label>
-                  <div class="col-xs-12 col-sm-10">
+                  <label class="col-xs-12 col-sm-3 control-label">Couleur :</label>
+                  <div class="col-xs-12 col-sm-9">
                     <input ng-model="product.color" Type="text" class="form-control" value="{{product.color}}" placeholder="Couleur...">
                   </div>
                 </div>
                 <div ng-repeat="s in product.size">
                   <div class="form-group">
-                    <label class="col-xs-12 col-sm-2 control-label">Taille :</label>
-                    <div class="col-xs-12 col-sm-10">
+                    <label class="col-xs-12 col-sm-3 control-label">Taille :</label>
+                    <div class="col-xs-12 col-sm-9">
                       <input ng-model="s.size_name" Type="text" class="form-control" value="{{s.size_name}}" placeholder="Taille...">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-xs-12 col-sm-2 control-label">Quantité :</label>
-                    <div class="col-xs-12 col-sm-10">
+                    <label class="col-xs-12 col-sm-3 control-label">Quantité :</label>
+                    <div class="col-xs-12 col-sm-9">
                       <input ng-model="s.quantity" Type="text" class="form-control" value="{{s.quantity}}" placeholder="Quantity...">
                     </div>
                   </div>

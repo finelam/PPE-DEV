@@ -93,6 +93,20 @@ ul, ol{
   background: #4EC67F !important;
   color: #FFF !important;
 }
+
+/**************************
+********* FOOTER ***********
+*****************************/
+
+#footer{
+  background: #4EC67F !important;
+  color: #FFF;
+}
+
+#footer a{
+  color: #FFF;
+}
+
 /**************************
 ********* NAVBAR ***********
 *****************************/

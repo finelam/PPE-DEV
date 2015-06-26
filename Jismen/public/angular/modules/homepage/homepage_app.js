@@ -1,10 +1,10 @@
-var homepage = angular.module('homepage_app', ['ngRoute']);
+var homepage = angular.module('homepage_app', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'user_app']);
 
 homepage.config(['$routeProvider', function($routeProvider){
 	$routeProvider
 		.when('/', {
 			templateUrl: 	'angular/modules/homepage/homepage.html',
-			controller: 	'homepageCtrl' 
+			controller: 	'homepageCtrl'
 		})
 
 		.when('/categorie/:cat/', {
@@ -39,7 +39,7 @@ homepage.controller('homepageCtrl', ['$scope', function($scope){
 			image: 'images/product2.jpg',
 			price: '40 €',
 			text : 'Easy Polo Black Edition'
-		}, 
+		},
 		{
 			image: 'images/product3.jpg',
 			price: '45 €',
@@ -61,7 +61,7 @@ homepage.controller('homepageCtrl', ['$scope', function($scope){
 			image: 'images/gallery2.jpg',
 			price: '40 €',
 			text : 'Easy Polo Black Edition'
-		}, 
+		},
 		{
 			image: 'images/gallery3.jpg',
 			price: '45 €',
