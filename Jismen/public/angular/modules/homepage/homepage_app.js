@@ -13,7 +13,7 @@ homepage.config(['$routeProvider', function($routeProvider){
 		});
 }]);
 
-homepage.controller('homepageCtrl', ['$scope', function($scope){
+homepage.controller('homepageCtrl', ['$scope', '$http', function($scope, $http){
 	$scope.test = 'homepageCtrl dans homepage_app.js';
 	$scope.slides = [
 		{
@@ -29,28 +29,7 @@ homepage.controller('homepageCtrl', ['$scope', function($scope){
 			text : 'robe débarddeur'
 		}
 	];
-	$scope.produits = [
-		{
-			image: 'images/product1.jpg',
-			price: '30 €',
-			text : 'Easy Polo Black Edition'
-		},
-		{
-			image: 'images/product2.jpg',
-			price: '40 €',
-			text : 'Easy Polo Black Edition'
-		},
-		{
-			image: 'images/product3.jpg',
-			price: '45 €',
-			text : 'Easy Polo Black Edition'
-		},
-		{
-			image: 'images/product4.jpg',
-			price: '30 €',
-			text : 'Easy Polo Black Edition'
-		}
-	];
+	$http.get('/api/product/all').success(function(products){$scope.products = products;});
 	$scope.produitsphares = [
 		{
 			image: 'images/gallery1.jpg',
@@ -75,6 +54,9 @@ homepage.controller('homepageCtrl', ['$scope', function($scope){
 	];
 }]);
 
-homepage.controller('subCatCtrl', ['$scope', '$routeParams', function($scope, $routeParams){
-	$scope.test = $routeParams.cat;
+homepage.controller('menuCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
+	$http.get('/api/categorie/all').success(function(categories){
+		$scope.isCollapsed = true;
+		$scope.categories = categories;
+	});
 }]);

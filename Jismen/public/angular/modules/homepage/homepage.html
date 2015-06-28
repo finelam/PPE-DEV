@@ -1,71 +1,60 @@
 <div ng-app="homepage_app">
-    <section id="section1" class="background-color-white">
-        <carousel interval="3000">
-            <slide ng-repeat="slide in slides" active="slide.active">
-                <img ng-src="{{slide.image}}" style="margin:auto;">
-                <div class="carousel-caption">
-                    <h3>{{slide.text}}</h3>
-                </div>
-            </slide>
-        </carousel>
-    </section>
-    <section id="section2" class="globalPadding">
-        <div class="col-sm-12 bg-grey">
-            <div class="features_items">
-                <h3 class="fancy text-center">
-           			<span>Nouveautés</span>
-        		</h3>
-        		<div ng-repeat="produit in produits">
-	                <div class="col-sm-3">
-	                    <div class="product-image-wrapper">
-	                        <div class="single-products">
-	                            <div class="productinfo text-center">
-	                                <img src="{{produit.image}}" alt="" />
-	                                <h2>{{produit.price}}</h2>
-	                                <p>{{produit.text}}</p>
-	                                <a href="#" class="btn  add-to-cart"><i class="fa fa-shopping-cart"></i> Ajouter au panier</a>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </div>
-                </div>
-            </div>
+  <section id="section1" class="background-color-white">
+    <carousel interval="3000" no-pause="true">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h3>{{slide.text}}</h3>
         </div>
-
-<div class="background-home-image">
-                <div class="row">
-                    <div class="col-xs-12 containt-text center">
-                        <h1>Test fond d'images</h1>
-                        <h2>Background OK</h2>
-                        <h3>Bientôt le bouton</h3>
-                        <div class="clear"></div>
-                        <a class="btn">Et voila le travail plus qu'a custo</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-12">
-            <div class="features_items">
-                <h3 class="fancy text-center">
-           			<span>Bonnes affaires</span>
-        		</h3>
-        		<div ng-repeat="produitphare in produitsphares">
-	                <div class="col-sm-3">
-	                    <div class="product-image-wrapper">
-	                        <div class="single-products">
-	                            <div class="productinfo text-center">
-	                                <img src="{{produitphare.image}}" alt="" />
-	                                <h2>{{produitphare.price}}</h2>
-	                                <p>{{produitphare.text}}</p>
-	                                <a href="#" class="btn  add-to-cart"><i class="fa fa-shopping-cart"></i>Aujouter au panier</a>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </div>
-                </div>
-            </div>
+      </slide>
+    </carousel>
+  </section>
+  <section id="section2" class="globalPadding">
+    <div class="col-sm-12 bg-grey pad-b-30">
+      <h3 class="fancy text-center">
+        <span>Nouveautés</span>
+      </h3>
+      <div class="article-list">
+        <div ng-repeat="new in products|filter:{tag: new}|limitTo: 8" class="col-sm-3 mg-bt-30 center ">
+          <div class="article">
+            <img src="http://placehold.it/200x200" alt="" />
+            <h3>{{new.name}}</h3>
+            <p>{{new.description}}</p>
+            <button class="btn btn-jismen-alt col-xs-12"><i class="fa fa-heart"></i> Coup de coeur</button>
+          </div>
         </div>
-
+      </div>
     </div>
-    </section>
+
+    <div class="background-home-image">
+      <div class="container-fluid content-text">
+        <div class="col-xs-12  col-sm-4 col-sm-offset-4 center mg-bt-120">
+          <div class="bordered">
+            <h1>Restez tendance avec notre newsletter mensuelle !</h1>
+            <a href="" class="btn mg-t-30">
+              <i class="fa fa-heart-o fa-lg"></i> Je m'inscris !
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12">
+      <h3 class="fancy text-center">
+        <span>Bonnes affaires</span>
+      </h3>
+      <div class="article-list">
+        <div ng-repeat="promo in products|filter:{tag: new}|limitTo: 8" class="mg-bt-30 center ">
+          <div class="article">
+            <img src="http://placehold.it/200x200" alt="" />
+            <h3>{{promo.name}}</h3>
+            <p>{{promo.description}}</p>
+            <button class="btn btn-jismen-alt col-xs-12"><i class="fa fa-heart"></i> Coup de coeur</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 </div>

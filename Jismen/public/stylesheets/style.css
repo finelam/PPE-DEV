@@ -3,6 +3,7 @@ html body {
   font: 14px;
   font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 21px;
+  background:#EDEEF0;
 }
 
 a {
@@ -75,14 +76,66 @@ ul, ol{
 .mg-t-15{
   margin-top: 15px;
 }
-.mg-b-15{
-  margin-bottom: 15px;
-}
 .mg-t-30{
   margin-top: 30px;
 }
+.mg-t-120{
+  margin-top: 120px;
+}
+.mg-b-15{
+  margin-bottom: 15px;
+}
 .mg-b-30{
   margin-bottom: 30px;
+}
+.mg-b-120{
+  margin-bottom: 120px;
+}
+.mg-bt-15{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.mg-bt-30{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.mg-bt-120{
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.pad-t-15{
+  padding-top: 15px;
+}
+.pad-t-30{
+  padding-top: 30px;
+}
+.pad-t-120{
+  padding-top: 120px;
+}enter
+.pad-b-15{
+  padding-bottom: 15px;
+}
+.pad-b-30{
+  padding-bottom: 30px;
+}
+.pad-b-120{
+  padding-bottom: 120px;
+}
+.pad-bt-15{
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.pad-bt-30{
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.pad-bt-120{
+  padding-bottom: 120px;
+  padding-top: 120px;
+}
+.pad-lr-10{
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .form-group .input-group{
@@ -90,20 +143,46 @@ ul, ol{
 }
 
 .panel-heading{
-  background: #4EC67F !important;
+  background: #49CCB5 !important;
   color: #FFF !important;
 }
 
+.btn-jismen{
+  background: #49CCB5 ;
+  color: #34495E;
+  border-radius: 0;
+}
+.btn-jismen:hover{
+  color: #FFF;
+}
+.btn-jismen-alt{
+  background: #4EC67F ;
+  color: #FFF;
+  border-radius: 0;
+  transition:background-color 0.5s, color 0.5s, -webkit-transform 0.5s;
+}
+.btn-jismen-alt:hover{
+  background-color: #FFB5DD;
+  color: ##333333;
+}
+
+.blueTitle{
+  color: #34495E;
+}
 /**************************
 ********* FOOTER ***********
 *****************************/
 
 #footer{
   background: #4EC67F !important;
-  color: #FFF;
+  color: #34495E;
 }
 
 #footer a{
+  color: #34495E;
+}
+
+#footer a:hover, #footer a:focus{
   color: #FFF;
 }
 
@@ -165,24 +244,16 @@ ul .userMenu{
    -o-transition: opacity 0.2s ease-out 0s;
 }
 
-.cartMenu{
-  display: block;
-  float: left;
-}
-
-.cartMenu a.dropdown-toggle {
-    color: #ffffff;
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 20px;
-    padding: 15px 20px;
-    text-transform: uppercase;
-}
-
 /**************************
 ********** MAIN ************
 *****************************/
+
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
 
 .item{
   height: 85vh;
@@ -263,7 +334,7 @@ ul .userMenu{
 }
 
 .background-home-image{
-  background: url("/images/fond-groupedefille.jpg");
+  background: url("/images/bg1.jpg");
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -272,9 +343,26 @@ ul .userMenu{
   background-attachment: fixed;
 }
 
-.background-home-image .containt-text{
-  padding: 100px 0;
+.background-home-image .content-text{
+  color: #FFF;
   background-color: rgba(0, 0, 0, 0.6);
+}
+.bordered{
+  border-style: solid;
+  border-color: #FFF;
+  border-radius: 5px;
+  padding-bottom: 15px;
+  background-color: rgba(31, 78, 50, 0.3);
+}
+
+.bordered a{
+  text-decoration: none;
+  color: #FFF;
+}
+
+.bordered a:hover, .bordered a:focus{
+  background-color: #FFB5DD!important;
+  transition:background-color 0.5s, -webkit-transform 0.5s;
 }
 
 .background-color-white{
@@ -290,102 +378,40 @@ ul .userMenu{
 }
 
 /*Home page*/
-.col-sm-3 .product-image-wrapper .single-products .productinfo .add-to-cart
-{
-  background-color: #4169E1;
-  font-size: 22px;
-  color: #fff;
-  font-weight: 300;
-  text-decoration: none;
-  border: 1px solid #4169E1;
-  border-radius: 3px;
-  margin-bottom: 15px;
+.article-list{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: nowrap;
+  -ms-flex-direction: nowrap;
+  flex-direction: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  overflow-x: auto;
 }
-
-/*Signup*/
-#signup.container-fluid{
-  font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-#signup.container-fluid .center-formulaire,
-#connexion.container-fluid .center-formulaire{
-  margin: 0 auto;
-  text-align: center;
-}
-
-.container-fluid .center-formulaire .user-content .line-serparator-blue{
-  border: solid 1px #00CCFF;
+.article{
+  height: 480px;
   width: 250px;
-  margin: 10px auto;
-}
-
-.container-fluid .center-formulaire .user-content .pas-encore-membre .free-registration{
-  border-top: solid 2px #00CCFF;
-  margin: 0 auto;
-  padding:10px;
-}
-
-.container-fluid .center-formulaire .user-content .mdp-oublie .free-registration{
-  padding: 10px 65px;
-  border-bottom: solid 2px #00CCFF;
-  margin: 10px auto;
-}
-
-
-.container-fluid .center-formulaire .user-content .form-inputs{
-  margin-bottom: 15px;
-}
-
-.container-fluid .center-formulaire .user-content .form-inputs.center-block{
-  display: table;
-  margin: 0 auto;
-}
-
-.center-formulaire .user-content .form-inputs input{
-  width:250px;
-  padding: 12px 20px;
+  margin: 0 15px;
+  border: 1px solid #dddddd;
   background-color: #FFF;
-  color: #404040;
-  font-size: 14px;
-  border: 1px solid #D1DEEB;
-  line-height: 22px;
-  height: 45px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  padding: 15px 5px;
+  transition: box-shadow 0.25s, border 0.25s;
+  position: relative;
 }
-
-.center-formulaire .user-content .form-inputs label{
-  display: table-cell;
-  vertical-align: middle;
-  padding-left: 10px;
+.article button{
+  position: absolute;
+  bottom: 20px;
+  left: 0;
 }
-
-.center-formulaire .user-content .form-inputs input.checkbox{
-  width: auto;
-  display: inline-block;
-}
-
-.center-formulaire .user-content .form-inputs .enregistrer,
-.center-formulaire .user-content .form-inputs .validation{
-  background-color: #4169E1;
-  font-size: 26px;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  border: 1px solid #4169E1;
-  border-radius: 3px;
-}
-
-#signup.container-fluid .title,
-#connexion.container-fluid .title{
-  font-size: 30px;
-  font-weight: 300;
-  color: #555;
-}
-
-#signup.container-fluid .margin-bottom-30px,
-#connexion.container-fluid .margin-bottom-30px{
-  margin-bottom: 30px
+.article:hover{
+  border: 1px solid #4EC67F;
+  box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.25s, border 0.25s;
 }
 
 /**************

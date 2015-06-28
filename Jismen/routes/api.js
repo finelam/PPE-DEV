@@ -68,14 +68,18 @@ router.post('/user/auth', function(req, res){
     if (err)
       throw err;
     if (!user)
-      res.json({success: false, message: 'Adresse mail inconnue'});
+      res.json({success: false, message: 'Utilisateur inconnu'});
     else{
-      var token = jwt.sign(user, app.get('secret'),{expiresInMinutes: 120,});
-      res.json({
-        success: true,
-        message: 'Auth : ok',
-        token: token
-      });
+      if (user.password != req.body.password){
+        res.json({success: false, message: "Mot de passe incorrect"});
+      }else{
+        var token = jwt.sign(user, app.get('secret'),{expiresInMinutes: 60,});
+        res.json({
+          success: true,
+          message: 'Auth : ok',
+          token: token
+        });
+      }
     }
   });
 });

@@ -1,0 +1,63 @@
+<div class="mg-t-30">
+  <div class="col-xs-12 col-md-6 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel-heading center">
+        <div class="panel-title">
+            <h1><span class="fa fa-user"></span> Mes informations</h1>
+        </div>
+      </div>
+      <div class="panel-body">
+        <form class="blueTitle" method="post">
+          <div class="form-group">
+            <label for="">Nom :</label>
+            <input class="form-control" ng-model="{{user.name}}" type="text" placeholder="Nom...">
+          </div>
+          <div class="form-group">
+            <label for="">Prénom :</label>
+            <input class="form-control" ng-model="{{user.firstname}}" type="text" placeholder="Prénom...">
+          </div><div class="form-group">
+            <label for="">E-mail :</label>
+            <input class="form-control" ng-model="{{user.email}}" type="text" placeholder="utilisateur@jismen.fr">
+          </div>
+          <div class="form-group">
+            <label for="">Téléphone :</label>
+            <input class="form-control" ng-model="{{user.tel}}" type="text" placeholder="+336...">
+          </div>
+          <div class="form-group">
+            <label for="">Adresse de livraison :</label>
+            <input class="form-control" ng-model="{{user.shipment.shipment_address}}" type="text" placeholder="Adresse...">
+            <input class="form-control" ng-model="{{user.shipment.shipment_zipcode}}" type="text" placeholder="Code postal.....">
+            <input class="form-control" ng-model="{{user.shipment.shipment_city}}" type="text" placeholder="Ville...">
+          </div>
+          <div class="form-group">
+            <label for="">Adresse de facturation :</label>
+            <input class="form-control" ng-model="{{user.billing.billing_address}}" type="text" placeholder="Adresse...">
+            <input class="form-control" ng-model="{{user.billing.billing_zipcode}}" type="text" placeholder="Code postal.....">
+            <input class="form-control" ng-model="{{user.billing.billing_city}}" type="text" placeholder="Ville...">
+          </div>
+          <button class="btn btn-jismen" type="button"><i class="fa fa-check"></i> Modifier</button>
+          <button class="btn btn-jismen" type="button"><i class="glyphicon glyphicon-repeat"></i> Annuler les modifications</button>
+          <button class="btn btn-jismen" type="button"><i class="fa fa-unlock-alt"></i> Changer mon mot de passe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-3 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel-heading center">
+        <div class="panel-title">
+          <h1><span class="fa fa-heart"></span> Mes coups de coeur</h1>
+        </div>
+      </div>
+      <div class="panel-body">
+        <table class="table table-hover">
+          <tr ng-repeat="favorite in user.favorites">
+            <td class="col-xs-9"></td>
+            <td class="col-xs-3 center"> <span class="fa fa-trash-o clickable"></span></td>
+          </tr>
+        </table>
+        <a href="#">Favoris</a>
+      </div>
+    </div>
+  </div>
+</div>

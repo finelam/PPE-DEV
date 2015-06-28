@@ -20,7 +20,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body style="background:#EDEEF0">
+  <body>
     <nav class="navbar navbar-fixed-top">
         <div class="navbar-top">
             <div class="container">
@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" ng-controller="menuCtrl">
             <div class="navbar-header col-md-2 col-sm-3">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
                     <span class="sr-only">Toggle navigation</span>
@@ -81,50 +81,18 @@
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="bold left-part">
-                                Top
-                                <ul>
-                                    <li class="no-puce line-separation"><a class="description">Chemise</a></li>
-                                    <li class="no-puce line-separation"><a class="description" href="">T-shirt</a></li>
-                                    <li class="no-puce line-separation"><a class="description" href="">Polo</a></li>
-                                </ul>
-                            </li>
-                            <li class="bold left-part">
-                                Bas
-                                <ul>
-                                    <li class="no-puce line-separation"><a class="description" href="">Jeans</a></li>
-                                    <li class="no-puce line-separation"><a class="description" href="">Jupe</a></li>
-                                    <li class="no-puce line-separation"><a class="description" href="">Short</a></li>
-                                </ul>
-                            </li>
-                            <li class="bold left-part">
-                                Accessoires
-                                <ul>
-                                    <li class="no-puce line-separation"><a class="description" href="">Chaussures</a></li>
-                                    <li class="no-puce line-separation"><a class="description" href="">Ceinture</a></li>
-                                    <li class="no-puce line-separation"><a class="description" href="">Sacs</a></li>
-                                </ul>
+                            <li ng-repeat="categorie in categories" class="">
+                              <div ng-mouseenter="isCollapsed = !isCollapsed" ng-mouseleave="isCollapsed = !isCollapsed" class="clickable" style="width:100%">
+                                <i class="fa fa-caret-right"></i> <b>{{categorie.name|uppercase}}</b>
+                              <ul collapse="isCollapsed" class="nav nav-pills nav-stacked">
+                                <li ng-repeat="subcat in categorie.subcat">
+                                  <a href="#/categorie/{{subcat.subcat_name}}/" style="color:#000">{{subcat.subcat_name|uppercase}}</a>
+                                </li>
+                              </ul></div>
                             </li>
                         </ul>
                     </li>
                 </ul>
-                <div class="nav navbar-nav navbar-right hidden-xs">
-                    <div class="dropdown cartMenu">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="glyphicon glyphicon-shopping-cart"></i>
-                            <span>Panier</span>
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu"></ul>
-                    </div>
-                    <div class="search-box">
-                        <div class="input-group">
-                            <button class="btn btn-nobg" type="button">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </nav>
@@ -140,7 +108,7 @@
   		<div class="">
   			<div class="container">
   				<div class="row">
-  					<div class="col-sm-2">
+  					<div class="col-sm-3">
   						<div class="">
   							<h2>Service</h2>
   							<ul class="nav nav-pills nav-stacked">
@@ -152,7 +120,7 @@
   							</ul>
   						</div>
   					</div>
-  					<div class="col-sm-2">
+  					<div class="col-sm-3">
   						<div class="">
   							<h2>Quock Shop</h2>
   							<ul class="nav nav-pills nav-stacked">
@@ -164,7 +132,7 @@
   							</ul>
   						</div>
   					</div>
-  					<div class="col-sm-2">
+  					<div class="col-sm-3">
   						<div class="">
   							<h2>Policies</h2>
   							<ul class="nav nav-pills nav-stacked">
@@ -176,7 +144,7 @@
   							</ul>
   						</div>
   					</div>
-  					<div class="col-sm-2">
+  					<div class="col-sm-3">
   						<div class="">
   							<h2>About Shopper</h2>
   							<ul class="nav nav-pills nav-stacked">
@@ -186,16 +154,6 @@
   								<li><a href="">Affillate Program</a></li>
   								<li><a href="">Copyright</a></li>
   							</ul>
-  						</div>
-  					</div>
-  					<div class="col-sm-3 col-sm-offset-1">
-  						<div class="">
-  							<h2>About Shopper</h2>
-  							<form action="#" class="">
-  								<input type="text" placeholder="Your email address" />
-  								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-  								<p>Get the most recent updates from <br />our site and be updated your self...</p>
-  							</form>
   						</div>
   					</div>
 
