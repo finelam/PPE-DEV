@@ -149,6 +149,20 @@ router.get('/product/tag/:tag', function(req, res){
   });
 });
 
+// Retourne tous les produits de la catégorie donnée
+router.get('/product/cat/:cat', function(req, res){
+  Product.find({subcat: req.params.cat}, function(err, products){
+    if(err)
+      res.send(err);
+    else {
+      if(products)
+        res.json(products);
+      else
+        res.send(false);
+    }
+  });
+});
+
 ////// methode : POST //////
 
 // Crée un nouveau produit

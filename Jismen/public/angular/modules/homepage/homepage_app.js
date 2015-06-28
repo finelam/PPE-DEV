@@ -6,10 +6,13 @@ homepage.config(['$routeProvider', function($routeProvider){
 			templateUrl: 	'angular/modules/homepage/homepage.html',
 			controller: 	'homepageCtrl'
 		})
-
+		.when('/tag/:tag', {
+			templateUrl: 	'angular/modules/homepage/tag.html',
+			controller: 	'tagCtrl'
+		})
 		.when('/categorie/:cat/', {
 			templateUrl: 	'angular/modules/homepage/subCat.html',
-			controller: 	'subCatCtrl'
+			controller: 	'subcatCtrl'
 		});
 }]);
 
@@ -26,37 +29,37 @@ homepage.controller('homepageCtrl', ['$scope', '$http', function($scope, $http){
 		},
 		{
 			image: 'http://img.cache-cache.fr/products_images/prod_20985/h_robe-debardeur-droite-cache-cache-noir-onroll-44.jpg',
-			text : 'robe débarddeur'
+			text : 'robe débardeur'
 		}
 	];
 	$http.get('/api/product/all').success(function(products){$scope.products = products;});
-	$scope.produitsphares = [
-		{
-			image: 'images/gallery1.jpg',
-			price: '30 €',
-			text : 'Easy Polo Black Edition'
-		},
-		{
-			image: 'images/gallery2.jpg',
-			price: '40 €',
-			text : 'Easy Polo Black Edition'
-		},
-		{
-			image: 'images/gallery3.jpg',
-			price: '45 €',
-			text : 'Easy Polo Black Edition'
-		},
-		{
-			image: 'images/gallery4.jpg',
-			price: '30 €',
-			text : 'Easy Polo Black Edition'
-		}
-	];
 }]);
 
 homepage.controller('menuCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
 	$http.get('/api/categorie/all').success(function(categories){
 		$scope.isCollapsed = true;
+		$scope.categories = categories;
+	});
+}]);
+
+homepage.controller('subcatCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
+	$scope.categorie = $routeParams.cat;
+	$scope.recherche = "";
+	$http.get('/api/product/cat/'+$routeParams.cat).success(function(products){
+		$scope.products = products;
+	});
+	$http.get('/api/categorie/all').success(function(categories){
+		$scope.categories = categories;
+	});
+}]);
+
+homepage.controller('tagCtrl', ['$scope', '$http','$routeParams', function($scope, $http, $routeParams){
+	$scope.tag = $routeParams.tag;
+	$scope.recherche= "";
+	$http.get('/api/product/tag/'+$routeParams.tag).success(function(products){
+		$scope.products = products;
+	});
+	$http.get('/api/categorie/all').success(function(categories){
 		$scope.categories = categories;
 	});
 }]);

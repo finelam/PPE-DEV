@@ -143,17 +143,20 @@ ul, ol{
 }
 
 .panel-heading{
-  background: #49CCB5 !important;
+  background: #34495E !important;
   color: #FFF !important;
 }
 
 .btn-jismen{
-  background: #49CCB5 ;
-  color: #34495E;
+  background: #34495E ;
+  color: #FFF;
   border-radius: 0;
+  transition:all 0.5s, color 0.5s, -webkit-transform 0.5s;
 }
 .btn-jismen:hover{
-  color: #FFF;
+  background-color: #4EC67F;
+  color: #34495E;
+  transition:all 0.5s, color 0.5s, -webkit-transform 0.5s;
 }
 .btn-jismen-alt{
   background: #4EC67F ;
@@ -412,6 +415,15 @@ ul .userMenu{
   border: 1px solid #4EC67F;
   box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.25s, border 0.25s;
+}
+
+/**************
+*** Products ****
+******************/
+.bordered-white{
+  border: solid 1px #dddddd;
+  background-color: #FFF;
+  padding: 15px;
 }
 
 /**************

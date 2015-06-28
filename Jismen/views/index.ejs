@@ -73,16 +73,16 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapsible">
                 <ul class="nav navbar-nav">
-                    <li><a href="#/">Nouveautés</a></li>
-                    <li><a href="#/promos">Bonnes affaires</a></li>
+                    <li><a href="#/tag/new">Nouveautés</a></li>
+                    <li><a href="#/tag/promo">Bons plans</a></li>
                     <li>
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expended="false">
                             Catégories
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li ng-repeat="categorie in categories" class="">
-                              <div ng-mouseenter="isCollapsed = !isCollapsed" ng-mouseleave="isCollapsed = !isCollapsed" class="clickable" style="width:100%">
+                            <li ng-repeat="categorie in categories">
+                              <div ng-mouseenter="isCollapsed = !isCollapsed" ng-mouseleave="isCollapsed = !isCollapsed" class="" style="width:100%">
                                 <i class="fa fa-caret-right"></i> <b>{{categorie.name|uppercase}}</b>
                               <ul collapse="isCollapsed" class="nav nav-pills nav-stacked">
                                 <li ng-repeat="subcat in categorie.subcat">
