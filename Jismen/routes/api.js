@@ -9,10 +9,6 @@ var Categorie = require('../models/categorie');
 var Comment   = require('../models/comment');
 
 
-router.get('/', function (req, res, next){
-  res.send('test');
-});
-
 
 /******** Users *********/
 
@@ -260,16 +256,26 @@ router.get('/comment/product/:product_id', function(req, res){
 
 // Retourne tous les catégories
 router.get('/categorie/all', function(req, res){
-  Categorie.find(function(err, categories){
-    if(err)
-      res.send(err);
-      else {
-        if (categories)
-          res.json(categories);
-        else
-          res.send(false);
-      }
-  })
-})
+  Categorie.find(/*function(err, categories)*/
+    // {
+    // if(err)
+    //   res.send(err);
+    //   else {
+    //     if (categories)
+    //       res.json(categories);
+    //     else
+    //       res.send(false);
+    //   }
+    // }
+  )
+  .populate('products')
+  .exec(function(err, categories){
+    if(err) throw err;
+    else {
+      if (categories) res.json(categories);
+      else res.send(false);
+    }
+  });
+});
 
 module.exports = router;

@@ -68,14 +68,24 @@ usersFactory.getUser($routeParams.user).success(function(user){
   };
 }]);
 
+admin.controller('NewUserCtrl', ['$scope', '$location', 'usersFactory', 'productsFactory',
+function($scope, $location, usersFactory, productsFactory){
+
+}]);
+
 /****************
 **** PRODUCTS ****
 *******************/
 
-admin.controller('ProductsCtrl', ['$scope', '$http', '$location', function ($scope, $http, $location) {
+admin.controller('ProductsCtrl', ['$scope', '$http', '$location', 'productsFactory', 'categoriesFactory',
+ function ($scope, $http, $location, productsFactory, categoriesFactory) {
   $scope.recherche = "";
-  $http.get('/api/categorie/all').success(function(categories){
+  categoriesFactory.allCategories().success(function(categories){
     $scope.categories = categories;
+  });
+
+  productsFactory.allProducts().success(function(products){
+    $scope.products = products;
   });
 
   $scope.selectProduct = function(product){
@@ -102,4 +112,9 @@ admin.controller('ProductCtrl', ['$scope', '$http', '$routeParams', function($sc
     $http.delete('/api/product/'+product._id);
     $location.path('/products');
   };
+}]);
+
+admin.controller('NewProductCtrl', ['$scope', '$http', 'productsFactory',
+function($scope, $http, productsFactory){
+
 }]);

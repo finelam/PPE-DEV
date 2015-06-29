@@ -2,16 +2,15 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-  login: String,
   password: {type: String, required: true},
   role: String,
   tel: String,
   email: {type: String, required: true, unique: true},
-  name : {type: String, required: true},
-  firstname: {type: String, required: true},
-  address: {type: String, required: true},
-  zipcode: {type: String, required: true},
-  city: {type: String, required: true},
+  name : {type: String},
+  firstname: {type: String},
+  address: {type: String},
+  zipcode: {type: String},
+  city: {type: String},
   shipment: {
     shipment_address: String,
     shipment_zipcode: String,
@@ -22,7 +21,7 @@ var UserSchema = new Schema({
     billing_zipcode: String,
     billing_city: String
   },
-  favorites: [Schema.Types.ObjectId],
+  favorites: [{type: Schema.Types.ObjectId, ref: 'product'}],
   orders: [{
     date: Date,
     products: [Schema.Types.ObjectId],

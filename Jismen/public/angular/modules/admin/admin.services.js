@@ -5,7 +5,7 @@ var adminServices = angular.module('adminServices', []);
 **************************/
 adminServices.factory('usersFactory', ['$http', function($http){
   return {
-    allUsers: function(users, err){
+    allUsers: function(){
       return $http.get('/api/user/all');
     },
     getUser: function(user){
@@ -28,6 +28,17 @@ adminServices.factory('productsFactory', ['$http', function($http){
   return {
     allProducts: function(products, err){
       return $http.get('/api/product/all');
+    }
+  }
+}]);
+
+/***********************
+******* CATEGORIES ******
+**************************/
+adminServices.factory('categoriesFactory', ['$http', function($http){
+  return {
+    allCategories: function(categories, err){
+      return $http.get('/api/categorie/all');
     }
   }
 }]);

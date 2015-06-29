@@ -1,32 +1,31 @@
 	<div class="mg-t-15" ng-app="admin_app">
-    <div class="col-xs-12 col-sm-6 col-md-offset-3">
       <!-- Search bar -->
-      <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-        <input type="text" name="name" ng-model="recherche" class="form-control" placeholder="Filtre...">
-      </div>
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 bordered-white" style="">
+		    <div class="col-sm-6">
+		      <div class="input-group">
+		        <div class="">
+		          {{(products|filter:recherche).length}} articles trouvés :
+		        </div>
+		      </div>
+		    </div>
+		    <div class="col-sm-6">
+		      <div class="input-group">
+		        <input type="text" name="recherche" class="form-control" placeholder="Filtre..." ng-model="recherche">
+		        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+		      </div>
+		    </div>
+		  </div>
       <!-- /Search bar -->
-    </div>
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
-      <!-- <div class="row"> -->
+    	<div class="col-xs-12 col-md-8 col-md-offset-2">
         <div class="panel panel-default mg-t-30">
           <div class="panel-heading center">
             <h1>ARTICLES</h1>
           </div>
-          <!-- <ul ng-repeat="categorie in categories" class="list-group">
-            <li class="list-group-item"><h4><b>{{categorie.name|uppercase}}</b></h4></li>
-            <li class="list-group-item">
-              <ul ng-repeat="subcat in categorie.subcat">
-                <li class="list-group-item"><h5><b>{{subcat.subcat_name|uppercase}}</b></h5></li>
-                <li class="list-group-item">
-                  <ul class="list-group">
-                    <li ng-repeat="product in subcat.products|filter: recherche track by $index" class="list-group-item">{{product}}</li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul> -->
 					<div class="panel-content">
+						<a href="#/new/products/" class="btn btn-jismen" style="width:100%">
+							<i class="fa fa-plus"></i>
+							Créer un nouvel article
+						</a>
 						<table ng-repeat="categorie in categories" class="table">
 							<tr><th>{{categorie.name}}</th></tr>
 							<tr ng-repeat="subcat in categorie.subcat"><td>
@@ -37,7 +36,7 @@
 									<tbody>
 										<tr ng-repeat="product in subcat.products|filter: recherche track by $index" ng-click="selectProduct(product)" class="clickable">
 											<td>
-												{{product}}
+												{{ (products|filter:product)[0].name }}
 											</td>
 										</tr>
 									</tbody>
@@ -47,5 +46,4 @@
 					</div>
         </div>
       </div>
-      <!-- </div> -->
   	</div>

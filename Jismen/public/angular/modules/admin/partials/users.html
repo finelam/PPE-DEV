@@ -1,15 +1,22 @@
 <div class="mg-t-15">
   <!-- Search bar -->
-  <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="">
-    <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-      <input type="text" name="recherche" class="form-control" placeholder="Filtre..." ng-model="recherche">
+  <div class="col-xs-12 col-sm-6 col-sm-offset-3 bordered-white" style="">
+    <div class="col-sm-6">
+      <div class="input-group">
+        <div class="">
+          {{(users|filter:recherche).length}} utilisateurs trouvés :
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="input-group">
+        <input type="text" name="recherche" class="form-control" placeholder="Filtre..." ng-model="recherche">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+      </div>
     </div>
   </div>
   <!-- /Search bar -->
-  <div class="col-xs-12 col-sm-6 col-sm-offset-3 alert alert-info">
-    {{(users|filter:recherche).length}} utilisateurs trouvés
-  </div>
+
 
   <div class="col-xs-12 col-sm-8 col-sm-offset-2 mg-t-30">
     <div class="panel panel-default">
@@ -17,6 +24,10 @@
         <h1>Utilisateurs</h1>
       </div>
       <div class="panel-content">
+        <a href="#/new/users/" class="btn btn-jismen" style="width:100%">
+          <i class="fa fa-plus"></i>
+          Créer un nouvel utilisateur
+        </a>
         <table class="table table-hover">
           <thead>
             <tr>

@@ -6,7 +6,7 @@ var CategorieSchema = new Schema({
   subcat: [
     {
       subcat_name: String,
-      products: [{type: Schema.ObjectId, ref: 'Product'}]
+      products: [{type: Schema.Types.ObjectId, ref: 'product'}]
     }
   ]
 },
