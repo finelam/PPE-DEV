@@ -6,6 +6,10 @@ admin.config(['$routeProvider', function($routeProvider){
       templateUrl: 'angular/modules/admin/partials/admin.html',
       controller: 'AdminCtrl'
     })
+    .when('/login', {
+      templateUrl: 'angular/modules/admin/partials/login.html',
+      controller: 'LoginCtrl'
+    })
     .when('/users',{
       templateUrl: 'angular/modules/admin/partials/users.html',
       controller: 'UsersCtrl'

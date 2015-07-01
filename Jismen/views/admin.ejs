@@ -20,7 +20,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body ng-controller="templateCtrl">
     <nav class="navbar navbar-fixed-top">
         <div class="navbar-top">
             <div class="container">
@@ -47,8 +47,12 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#/login" data-target="modal-connexion" data-toggle="modal">
+                                    <a ng-show="!auth" href="#/login" data-target="modal-connexion" data-toggle="modal">
                                         <span class="hidden-xs"> Connexion </span>
+                                        <i class="glyphicon glyphicon-log-in hidden visible-xs"></i>
+                                    </a>
+                                    <a href="" ng-show="auth" ng-click="logout()" data-target="modal-connexion" data-toggle="modal">
+                                        <span class="hidden-xs"> Déconnexion </span>
                                         <i class="glyphicon glyphicon-log-in hidden visible-xs"></i>
                                     </a>
                                 </li>

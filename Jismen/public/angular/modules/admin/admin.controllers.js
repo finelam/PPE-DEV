@@ -8,11 +8,11 @@ admin.controller('AdminCtrl', [
   '$scope', '$http', 'usersFactory', 'productsFactory', 'commentsFactory',
   function($scope, $http, usersFactory, productsFactory, commentsFactory){
 
-  usersFactory.allUsers()
+  usersFactory.getAllUsers()
   .success(function(users){$scope.users = users;})
   .error(function(err){console.log(err);});
 
-  productsFactory.allProducts()
+  productsFactory.getAllProducts()
   .success(function(products){$scope.products = products;})
   .error(function(err){console.log(err);});
 
@@ -28,6 +28,21 @@ admin.controller('AdminCtrl', [
 
 }]);
 
+admin.controller('LoginCtrl', ['$scope', '$location', '$window', 'loginFactory', function($scope, $location, $window, loginFactory){
+  $scope.email = "";
+  $scope.password = "";
+  $scope.login = function(email, password){
+    loginFactory.login(email, password)
+    .success(function(user){
+      $window.sessionStorage.token = user.token;
+    })
+    .error(function(status, data){
+      console.log(status);
+      console.log(data);
+    });
+  };
+}]);
+
 /****************
 ***** USERS ******
 *******************/
@@ -35,7 +50,7 @@ admin.controller('AdminCtrl', [
 admin.controller('UsersCtrl', ['$scope', '$http', '$location', 'usersFactory', function ($scope, $http, $location, usersFactory) {
   $scope.recherche = "";
 
-  usersFactory.allUsers().success(function(users){$scope.users = users;});
+  usersFactory.getAllUsers().success(function(users){$scope.users = users;});
 
   $scope.selectUser = function(user){$location.path('/users/'+user._id);};
 }]);
@@ -80,21 +95,21 @@ function($scope, $location, usersFactory, productsFactory){
 admin.controller('ProductsCtrl', ['$scope', '$http', '$location', 'productsFactory', 'categoriesFactory',
  function ($scope, $http, $location, productsFactory, categoriesFactory) {
   $scope.recherche = "";
-  categoriesFactory.allCategories().success(function(categories){
+  categoriesFactory.getAllCategories().success(function(categories){
     $scope.categories = categories;
   });
 
-  productsFactory.allProducts().success(function(products){
+  productsFactory.getAllProducts().success(function(products){
     $scope.products = products;
   });
 
   $scope.selectProduct = function(product){
-    $location.path('/product/'+product);
+    $location.path('/products/'+product);
   };
 }]);
 
-admin.controller('ProductCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
-  $http.get('/api/product/'+$routeParams.product).success(function(product){
+admin.controller('ProductCtrl', ['$scope', '$http', '$routeParams', 'productsFactory', function($scope, $http, $routeParams, productsFactory){
+  productsFactory.getProduct($routeParams.product).success(function(product){
     $scope.product = product;
     $scope.master = angular.copy(product);
   });

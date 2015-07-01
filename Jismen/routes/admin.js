@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
+// Accueil admin
+router.get('/', function(req, res, next){
+  res.render('admin', {title : 'Jismen - ADMIN'});
+});
 
 router.use(function(req, res, next) {
   var token = req.body.token || req.query.token || req.headers['x-access-token'];
@@ -19,11 +23,6 @@ router.use(function(req, res, next) {
   } else {
     return res.status(403).send({success: false, message: 'Pas de token'});
   }
-});
-
-// Accueil admin
-router.get('/', function(req, res, next){
-  res.render('admin', {title : 'Jismen - ADMIN'});
 });
 
 module.exports = router;

@@ -15,13 +15,11 @@
         <span>Nouveautés</span>
       </h3>
       <div class="article-list">
-        <div ng-repeat="new in products|filter:{tag: new}|limitTo: 8" class="col-sm-3 mg-bt-30 center ">
-          <div class="article">
-            <img src="images/200x200.png" alt="" />
-            <h3>{{new.name}}</h3>
-            <p>{{new.description}}</p>
-            <button class="btn btn-jismen-alt col-xs-12"><i class="fa fa-heart"></i> Coup de coeur</button>
-          </div>
+        <div ng-repeat="new in products|filter:{tag: new}|limitTo: 8" class="mg-bt-30 article">
+          <img src="images/200x200.png"/>
+          <h3>{{new.name}}</h3>
+          <p>{{new.description}}</p>
+            <button class="btn btn-jismen-alt"><i class="fa fa-heart"></i> Coup de coeur</button>
         </div>
       </div>
     </div>
@@ -44,13 +42,11 @@
         <span>Bons plans</span>
       </h3>
       <div class="article-list">
-        <div ng-repeat="promo in products|filter:{tag: new}|limitTo: 8" class="mg-bt-30 center">
-          <div class="article">
-            <img src="images/200x200.png" alt="{{product.name}}" />
-            <h3>{{promo.name}}</h3>
-            <p>{{promo.description}}</p>
-            <button class="btn btn-jismen-alt col-xs-12"><i class="fa fa-heart"></i> Coup de coeur</button>
-          </div>
+        <div ng-repeat="promo in products|filter:{tag: new}|limitTo: 8" class="article">
+          <img src="images/200x200.png" alt="{{product.name}}" />
+          <h3>{{promo.name}}</h3>
+          <p>{{promo.description}}</p>
+          <button class="btn btn-jismen-alt"><i class="fa fa-heart"></i> Coup de coeur</button>
         </div>
       </div>
     </div>
