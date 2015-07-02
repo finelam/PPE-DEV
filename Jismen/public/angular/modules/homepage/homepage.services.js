@@ -15,6 +15,9 @@ homepageServices.factory('productFactory', ['$http', function($http){
     },
     getCat: function(cat){
       return $http.get('/api/product/cat/'+cat);
+    },
+    getProduct: function(product){
+      return $http.get('/api/product/'+product);
     }
   };
 }])
@@ -28,3 +31,4 @@ homepageServices.factory('userFactory', ['$http', function($http){
     }
   };
 }]);
+

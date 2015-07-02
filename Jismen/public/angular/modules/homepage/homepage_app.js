@@ -29,5 +29,11 @@ homepage.config(['$routeProvider', function($routeProvider){
 			templateUrl: 'angular/modules/homepage/partials/user.html',
 			controller: 'UserCtrl'
 		})
+
+		//description produit
+		.when('/descriptionproduit/:product', {
+			templateUrl: 'angular/modules/homepage/partials/descriptionproduit.html',
+			controller: 'DescriptionproduitCtrl'
+		})
 		;
 }]);

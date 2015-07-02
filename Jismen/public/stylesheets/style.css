@@ -389,7 +389,7 @@ ul .userMenu{
 }
 .article{
   height: 480px;
-  width: 250px;
+  width: 280px;
   border: 1px solid #dddddd;
   background-color: #FFF;
   text-align: center;
@@ -400,6 +400,13 @@ ul .userMenu{
   display: inline-block;
   vertical-align: middle;
   white-space: normal;
+  cursor: pointer;
+}
+.article a{
+  color: black;
+}
+.article a:hover{
+  text-decoration: none;
 }
 .article button{
   position: absolute;
