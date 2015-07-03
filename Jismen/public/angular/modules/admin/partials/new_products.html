@@ -1,3 +1,49 @@
-<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
-  
+<div class="col-xs-12 col-md-6 col-md-offset-3 mg-bt-30">
+  <h1 class="title center mg-b-30">Nouvel article</h1>
+    <form ng-submit="addProduct(product)" name="productForm" novalidate>
+      <div class="form-group col-md-6">
+        <label class="control-label">Nom<span class="red"> *</span> :</label>
+        <input ng-model="product.name" Type="text" class="form-control" value="{{product.name}}" placeholder="Nom..." required>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="control-label">Prix<span class="red"> *</span> :</label>
+        <input ng-model="product.price" Type="number" class="form-control" value="{{product.prix}}" placeholder="Prix..." required>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="control-label">Tag<span class="red"> *</span> :</label>
+        <select ng-model="product.tag" class="form-control" name="" value="{{product.tag}}" required>
+          <option>none</option>
+          <option>vip</option>
+          <option>promo</option>
+          <option>new</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="control-label">Description<span class="red"> *</span> :</label>
+        <input ng-model="product.description" Type="textarea" class="form-control" value="{{product.description}}" placeholder="Description..." required>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="control-label">Couleur<span class="red"> *</span> :</label>
+        <input ng-model="product.color" Type="text" class="form-control" value="{{product.color}}" placeholder="Couleur..." required>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="control-label">Catégorie<span class="red"> *</span> :</label>
+        <select ng-model="product.subcat" Type="select" class="form-control" value="{{product.subcat}}" placeholder="Catégorie..." required>
+          <option ng-repeat="subcat in subcats">{{subcat.subcat_name}}</option>
+        </select>
+      </div>
+      <div class="form-group col-xs-12">
+        <label class="control-label">Photo<span class="red"> *</span> :</label>
+        <input ng-model="s.picture" Type="file" value="{{s.picture}}" placeholder="Photo...">
+      </div>
+      <div class="col-xs-12"><span class="red"> *</span> Champs obligatoires</div>
+      <div class="mg-t-15 col-xs-12">
+        <button ng-disabled="productForm.$invalid" type="submit" name="Enregistrer" class="btn btn-primary mg-b-15 col-xs-12 col-sm-5">
+          <i class="glyphicon glyphicon-ok"></i> Enregistrer
+        </button>
+        <a href="admin#/products" class="btn btn-danger mg-b-15 col-xs-12 col-sm-5 col-sm-offset-2">
+          <i class="fa fa-ban"></i> Annuler
+        </a>
+      </div>
+    </form>
 </div>

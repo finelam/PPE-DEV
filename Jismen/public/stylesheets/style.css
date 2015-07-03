@@ -57,8 +57,8 @@ a {
     color: #fff;
 }
 
-.nav > li.active, .nav > li > a:hover, .nav > li > a:focus, .nav > li:hover > a {
-  background: #27AE60  none repeat scroll 0 0;
+.nav > li.active, .nav > li > a:hover, .nav > li > a:focus, .nav > li:hover > a{
+  background: #27AE60  none repeat scroll 0 0!important;
 }
 
 ul, ol{
