@@ -98,7 +98,7 @@ homepageControllers.controller('UserCtrl', ['$scope', '$routeParams', '$http',fu
 }]);
 
 homepageControllers.controller('DescriptionproduitCtrl', ['$scope', '$routeParams','productFactory', function($scope, $routeParams, productFactory){
- productFactory.getProduct(routeParams.product).success(function(product){
+ productFactory.getProduct($routeParams.product).success(function(product){
   $scope.product = product;
  });
 }]);
