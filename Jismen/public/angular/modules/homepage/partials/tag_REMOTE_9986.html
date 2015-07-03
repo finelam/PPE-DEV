@@ -1,0 +1,34 @@
+<div class="col-xs-12 col-sm-10 col-sm-offset-1 blueTitle mg-bt-30">
+	<h1>{{tag|uppercase}}</h1>
+	<!-- Recherche -->
+	<div class="bordered-white input-group">
+		<div class="col-xs-12 col-sm-6">
+			<div class="input-group">
+			{{(products|filter:recherche).length}} articles correspondants :
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<div class="input-group">
+				<input type="text" class="form-control" ng-model="recherche">
+				<span class="input-group-addon"><i class="fa fa-search"></i></span>
+			</div>
+		</div>
+	</div>
+	<!-- /Recherche -->
+	<!-- Affichage -->
+  <div ng-repeat="categorie in categories"  class="col-xs-12">
+    <div>
+      <h3>{{categorie.name|uppercase}}</h3>
+    </div>
+    <div ng-repeat="subcat in categorie.subcat" class="col-xs-12">
+      <div><h4><i class="fa fa-caret-right"></i> {{subcat.subcat_name|uppercase}}</h4></div>
+  		<div ng-repeat="product in products|filter:{subcat: subcat.subcat_name}|filter: recherche" class="col-sm-6 col-md-4 mg-bt-30 center article">
+				<img src="images/200x200.png" alt="" />
+				<h3>{{product.name}}</h3>
+				<p>{{product.description}}</p>
+				<button class="btn btn-jismen-alt col-xs-12"><i class="fa fa-heart"></i> Coup de coeur</button>
+  		</div>
+    </div>
+  </div>
+  <!-- /Affichage -->
+</div>
