@@ -48,15 +48,22 @@ router.get('/user/:user_id', function(req, res){
 
 // Crée un nouvel utilisateur
 router.post('/user/', function(req, res){
-  var user = new User(req.body);
-  user.save(function(err){
-    if(err)
-      res.send('err');
-    else
-      res.send(true);
-  });
+  User.findOne({email: req.body.user.email}, function(err, user){
+    if(err){
+      res.send({success: false, message: err})
+    }else {
+      if(user){
+        res.send({success: false, message: 'Cette adresse mail est déjà utilisée.'});
+      }else{
+        var user = new User(req.body.user);
+        user.save(req.body.user, function(err, user){
+          if(err) res.send({success: false, message: err});
+          else res.send({success: true, user:user});
+        });
+      }
+    }
+  })
 });
-
 
 // Retourne l'utilisateur correspondant au login + mdp
 router.post('/user/auth', function(req, res){
@@ -93,7 +100,7 @@ router.put('/user/', function(req, res){
 ////// methode : delete //////
 router.delete('/user/:userId', function(req, res){
   User.remove({_id: req.params.userId}, function(err, response){
-    if (err) throw err;
+    if (err) console.log(err);
     else res.json({success: true, message: response});
   });
 });
@@ -162,13 +169,15 @@ router.get('/product/cat/:cat', function(req, res){
 ////// methode : POST //////
 
 // Crée un nouveau produit
-router.post('/product', function(req, res){
-  var product = new Product(req.body);
-  product.save(function(err){
+router.post('/product/', function(req, res){
+  // console.log(req.body.newProduct);
+  var product = new Product(req.body.newProduct);
+  product.save(function(err, product){
     if(err)
-      res.send(err);
-    else
-      res.send(true);
+      res.send({success: false, message: err});
+    else{
+      res.send({success: true, message: product});
+    }
   });
 });
 

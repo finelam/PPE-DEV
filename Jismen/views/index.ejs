@@ -75,6 +75,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#/tag/new">Nouveautés</a></li>
                     <li><a href="#/tag/promo">Bons plans</a></li>
+                    <li><a href="#/tag/vip">VIP</a></li>
                     <li>
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expended="false">
                             Catégories
@@ -84,11 +85,12 @@
                             <li ng-repeat="categorie in categories">
                               <div ng-mouseenter="isCollapsed = !isCollapsed" ng-mouseleave="isCollapsed = !isCollapsed" class="" style="width:100%">
                                 <i class="fa fa-caret-right"></i> <b>{{categorie.name|uppercase}}</b>
-                              <ul collapse="isCollapsed" class="nav nav-pills nav-stacked">
-                                <li ng-repeat="subcat in categorie.subcat">
-                                  <a href="#/categorie/{{subcat.subcat_name}}/" style="color:#000">{{subcat.subcat_name|uppercase}}</a>
-                                </li>
-                              </ul></div>
+                                <ul collapse="isCollapsed" class="nav nav-pills nav-stacked">
+                                  <li ng-repeat="subcat in categorie.subcat">
+                                    <a href="#/categorie/{{subcat.subcat_name}}/" style="color:#000">{{subcat.subcat_name|uppercase}}</a>
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
                         </ul>
                     </li>
