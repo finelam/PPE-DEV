@@ -440,3 +440,11 @@ ul .userMenu{
 .clickable{
   cursor: pointer;
 }
+
+
+/*Description Produit*/
+.encadrer{
+  border: solid 1px #dddddd;
+  background-color: #fff;
+  padding: 15px 15px;
+}
