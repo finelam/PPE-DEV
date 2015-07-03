@@ -51,7 +51,7 @@
       <span class="red">*</span> Champs obligatoires
     </p>
     <div class="col-xs-12">
-      <input ng-disabled="newUserForm.$invalid || newUser.password != newUser.confirmPass || newUser.confirmPass == null" class="btn btn-primary col-xs-12 col-sm-5" type="submit" value="Enregistrer" />
+      <input ng-disabled="newUserForm.$invalid || newUser.password != confirmPass || confirmPass == ''" class="btn btn-primary col-xs-12 col-sm-5" type="submit" value="Enregistrer" />
       <a href="#/users" class="btn btn-danger col-xs-12 col-sm-5 col-sm-offset-2"><i class="fa fa-ban"></i> Annuler</a>
     </div>
   </form>
