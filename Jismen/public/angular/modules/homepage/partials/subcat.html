@@ -18,10 +18,13 @@
 	<!-- Affichage -->
 		<div ng-repeat="product in products|filter:recherche|orderBy:'tag'" class="col-sm-6 col-lg-4 mg-bt-30 center ">
 			<div class="article">
-				<img src="images/200x200.png"/>
-				<h3>{{product.name}}</h3>
-				<p>{{product.description}}</p>
-				<button class="btn btn-jismen-alt col-xs-12"><i class="fa fa-heart"></i> Coup de coeur</button>
+				<a href="#/descriptionproduit/{{product._id}}">
+		            <img src="{{product.picture}}"/>
+		            <h3>{{product.name}}</h3>
+		            <p>{{product.description}}</p>
+		            <p>{{product.price}} €</p>
+		            <button class="btn btn-jismen-alt col-xs-12"><i class="fa fa-heart"></i> Coup de coeur</button>
+          		</a>
 			</div>
 		</div>
 		<!-- /Affichage -->
