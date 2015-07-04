@@ -11,7 +11,7 @@
             </div>
             <div class="form-group col-md-6">
               <label>Prénom :</label>
-              <input ng-model="firstname" class="form-control" type="text" name="Prenom" placeholder="Prénom..." />
+              <input ng-model="firstname" class="form-control" type="text" name="Prenom" placeholder="Prénom..."/>
             </div>
             <div class="form-group col-md-6">
               <label>Adresse :</label>
@@ -19,7 +19,7 @@
             </div>
             <div class="form-group col-md-6">
               <label>Code postal :</label>
-              <input ng-model="zipcode" class="form-control" type="text" name="CP" placeholder="Code postal..." />
+              <input ng-model="zipcode" class="form-control" type="text" name="CP" placeholder="Code postal..."/>
             </div>
             <div class="form-group col-md-6">
               <label>Ville :</label>
@@ -47,7 +47,7 @@
               <span class="red">*</span> Champs obligatoires
             </p>
             <div class="">
-              <input ng-disabled="signupForm.$invalid || password != confirmPass || confirmPass == null" class="btn btn-primary col-xs-12" type="submit" value="S'enregistrer !" />
+              <input ng-disabled="signupForm.$invalid || password != confirmPass || confirmPass == null || password.length <6 || name.length <4 || firstname.length <6 || zipcode.length <5 " class="btn btn-primary col-xs-12" type="submit" value="S'enregistrer !" />
             </div>
           </form>
         </div>
